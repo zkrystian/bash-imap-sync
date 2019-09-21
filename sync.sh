@@ -1,29 +1,30 @@
 #!/bin/bash
 
 
+
+
 SERVERNAME=$HOSTNAME
 SCRIPT_NAME="$SERVERNAME - IMAP TO IMAP"
 MAIL=/bin/mail;
-MAIL_RECIPIENT="zkrystian@gmail.com"
-LOCK_FILE="/tmp/$SERVERNAME.imapsync/estella.lockfile"
-LOGFILE="imapsync_log_estella.txt"
+MAIL_RECIPIENT="enail@gmail.com"
+LOCK_FILE="/tmp/$SERVERNAME.imapsync.lockfile"
+LOGFILE="imapsync_log.txt"
 
 
-#host1 source
-HOST1=stella.home.pl
-DOMAIN1=stella.home.pl
+#host1 source host and domain
+HOST1=server1.hostname.com
+DOMAIN1=domain1.com
 
 
-#host2 destination
-HOST2=afrodyta.boost.pl
-DOMAIN2=estella.eu
+#host2 destination and domain destination
+HOST2=server2.hostname.com
+DOMAIN2=domain2.com
 
 
-#domena w której znajdują się skrzynki
-DOMAIN=estella.eu
+
 
 ####################################################
-###### Nie modyfikuj poniżej tej linii
+###### Dont touch below this line
 ####################################################
 
 if [ ! -e $LOCK_FILE ]; then
@@ -49,7 +50,7 @@ TIME_NOW=$(date +"%Y-%m-%d %T")
 echo "User $USER_NAME done"
 echo "Finished $USER_NAME $TIME_NOW" >> $LOGFILE
 echo "" >> $LOGFILE
-done ; } < estella.txt
+done ; } < accounts.txt
 TIME_NOW=$(date +"%Y-%m-%d %T")
 echo "" >> $LOGFILE
 echo "IMAPSync Finished - $TIME_NOW" >> $LOGFILE
