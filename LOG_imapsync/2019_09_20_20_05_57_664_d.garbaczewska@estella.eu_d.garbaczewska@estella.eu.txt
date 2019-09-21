@@ -1,0 +1,382 @@
+Here is imapsync 1.945 on host noc, a linux system with 0.7/1.9 free GiB of RAM
+with Perl 5.26.1 and Mail::IMAPClient 3.42
+Transfer started at Fri Sep 20 20:05:57 2019
+PID is 5964 my PPID is 1013
+Log file is LOG_imapsync/2019_09_20_20_05_57_664_d.garbaczewska@estella.eu_d.garbaczewska@estella.eu.txt ( to change it, use --logfile path ; or use --nolog to turn off logging )
+Load is 0.37 0.23 0.18 1/220 on 1 cores
+Current directory is /root/bash-imap-sync
+Real user id is root (uid 0)
+Effective user id is root (euid 0)
+$RCSfile: imapsync,v $ $Revision: 1.945 $ $Date: 2019/06/26 19:30:56 $ 
+Command line used, run by /usr/bin/perl:
+/usr/bin/imapsync --addheader --no-modulesversion --nosyncacls --nosslcheck --syncinternaldates --host1 stella.home.pl --user1 d.garbaczewska@estella.eu --password1 MASKED --host2 afrodyta.boost.pl --user2 d.garbaczewska@estella.eu --password2 MASKED --noauthmd5
+Temp directory is /tmp ( to change it use --tmpdir dirpath )
+kill -QUIT 5964 # special behavior: call to sub catch_exit
+kill -TERM 5964 # special behavior: call to sub catch_exit
+kill -INT 5964 # special behavior: call to sub catch_reconnect
+kill -HUP 5964 # special behavior: call to sub catch_print
+kill -USR1 5964 # special behavior: call to sub toggle_sleep
+File /tmp/imapsync.pid does not exist
+PID file is /tmp/imapsync.pid ( to change it, use --pidfile filepath ; to avoid it use --pidfile "" )
+Writing my PID 5964 in /tmp/imapsync.pid
+Writing also my logfile name in /tmp/imapsync.pid : LOG_imapsync/2019_09_20_20_05_57_664_d.garbaczewska@estella.eu_d.garbaczewska@estella.eu.txt
+Info: will resync flags for already transferred messages. Use --noresyncflags to not resync flags.
+Info: turned ON syncinternaldates, will set the internal dates (arrival dates) on host2 same as host1.
+Host1: will try to use LOGIN authentication on host1
+Host2: will try to use LOGIN authentication on host2
+Host1: imap connection timeout is 120 seconds
+Host2: imap connection timeout is 120 seconds
+Host1: IMAP server [stella.home.pl] port [143] user [d.garbaczewska@estella.eu]
+Host2: IMAP server [afrodyta.boost.pl] port [143] user [d.garbaczewska@estella.eu]
+Host1: connecting and login on host1 [stella.home.pl] port [143] with user [d.garbaczewska@estella.eu]
+Host1 IP address: 79.96.68.165
+Host1 banner: * OK stella.home.pl IdeaImapServer 0.83.292 ready
+Host1 capability before authentication: IMAP4rev1 LITERAL+ CHILDREN I18NLEVEL=1 IDLE SORT SORT=DISPLAY UIDPLUS UNSELECT QUOTA MOVE WITHIN LIST-EXTENDED LIST-STATUS SPECIAL-USE XLIST STARTTLS AUTH=PLAIN AUTH=LOGIN I18NLEVEL AUTH
+Host1: going to ssl because STARTTLS is in CAPABILITY. Use --notls1 or --notls2 to avoid that behavior
+Host1: Socket successfuly converted to SSL
+Host1: stella.home.pl says it has CAPABILITY for AUTHENTICATE LOGIN
+Host1: success login on [stella.home.pl] with user [d.garbaczewska@estella.eu] auth [LOGIN]
+Host2: connecting and login on host2 [afrodyta.boost.pl] port [143] with user [d.garbaczewska@estella.eu]
+Host2 IP address: 148.251.0.25
+Host2 banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ STARTTLS AUTH=PLAIN] Dovecot DA ready.
+Host2 capability before authentication: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ STARTTLS AUTH=PLAIN AUTH
+Host2: going to ssl because STARTTLS is in CAPABILITY. Use --notls1 or --notls2 to avoid that behavior
+Host2: Socket successfuly converted to SSL
+Host2: success login on [afrodyta.boost.pl] with user [d.garbaczewska@estella.eu] auth [LOGIN]
+Host1: state Authenticated
+Host2: state Authenticated
+Host1 capability once authenticated: IMAP4rev1 LITERAL+ CHILDREN I18NLEVEL=1 IDLE SORT SORT=DISPLAY UIDPLUS UNSELECT QUOTA MOVE WITHIN LIST-EXTENDED LIST-STATUS SPECIAL-USE XLIST I18NLEVEL
+Host2 capability once authenticated: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT SORT=DISPLAY THREAD=REFERENCES THREAD=REFS THREAD=ORDEREDSUBJECT MULTIAPPEND URL-PARTIAL CATENATE UNSELECT CHILDREN NAMESPACE UIDPLUS LIST-EXTENDED I18NLEVEL=1 CONDSTORE QRESYNC ESEARCH ESORT SEARCHRES WITHIN CONTEXT=SEARCH LIST-STATUS BINARY MOVE SNIPPET=FUZZY PREVIEW=FUZZY LITERAL+ NOTIFY QUOTA THREAD I18NLEVEL CONTEXT SNIPPET PREVIEW
+Host1: No ID capability
+
+Host2: found ID capability. Sending/receiving ID, presented in raw IMAP for now.
+In order to avoid sending/receiving ID, use option --noid
+Sending: 6 ID ("name" "imapsync" "version" "1.945" "os" "linux" "vendor" "Gilles LAMIRAL" "support-url" "https://imapsync.lamiral.info/" "date" "26-Jun-2019 19:30:56 +0000" "side" "host2")
+Sent 181 bytes
+Read: 	* ID ("name" "Dovecot")
+  	6 OK ID completed (0.001 + 0.000 secs).
+
+
+Host2: found quota, presented in raw IMAP
+Sending: 7 GETQUOTAROOT INBOX
+Sent 22 bytes
+Read: 	7 OK No quota (0.001 + 0.000 secs).
+
+Host2: Quota current storage is 0 bytes. Limit is 0 bytes. So 0 % full
+Host1: found 7 folders.
+Host2: found 7 folders.
+Host1: guessing separator from folder listing: [/]
+Host1: No NAMESPACE capability, so using guessed separator [/]
+You can set the separator character with the --sep1 option,
+the complete listing of folders may help you to find it
+[DRAFTS]
+[INBOX]
+[SENT]
+[SPAM]
+[TRASH]
+[confirmed-ham]
+[confirmed-spam]
+Host2: guessing separator from folder listing: [/]
+Host2: separator given by NAMESPACE: [.]
+Host1: guessing prefix from folder listing: []
+Host1: No NAMESPACE capability so using guessed prefix []
+You can set the prefix namespace with the --prefix1 option,
+the folowing listing of folders may help you to find it:
+[DRAFTS]
+[INBOX]
+[SENT]
+[SPAM]
+[TRASH]
+[confirmed-ham]
+[confirmed-spam]
+Host2: guessing prefix from folder listing: []
+Host2: prefix given by NAMESPACE: []
+Host1: separator and prefix: [/][]
+Host2: separator and prefix: [.][]
+Including all folders found by default. Use --subscribed or --folder or --folderrec or --include to select specific folders. Use --exclude to unselect specific folders.
+Host1: Checking wanted folders exist. Use --nocheckfoldersexist to avoid this check (shared of public namespace targeted).
+Host1: Checking wanted folders are selectable. Use --nocheckselectable to avoid this check.
+Turned off automapping folders ( use --automap to turn on automapping )
+
+++++ Listing folders
+All foldernames are presented between brackets like [X] where X is the foldername.
+When a foldername contains non-ASCII characters it is presented in the form
+[X] = [Y] where
+X is the imap foldername you have to use in command line options and
+Y is the utf8 output just printed for convenience, to recognize it.
+
+Host1: folders list (first the raw imap format then the [X] = [Y]):
+* LIST (\HasNoChildren \Drafts) "." "DRAFTS"
+* LIST (\HasNoChildren) "." "INBOX"
+* LIST (\HasNoChildren \Sent) "." "SENT"
+* LIST (\HasNoChildren \Junk) "." "SPAM"
+* LIST (\HasNoChildren \Trash) "." "TRASH"
+* LIST (\HasNoChildren) "." "confirmed-ham"
+* LIST (\HasNoChildren) "." "confirmed-spam"
+17 OK Completed
+
+[DRAFTS]
+[INBOX]
+[SENT]
+[SPAM]
+[TRASH]
+[confirmed-ham]
+[confirmed-spam]
+
+Host2: folders list (first the raw imap format then the [X] = [Y]):
+* LIST (\HasNoChildren) "." confirmed-spam
+* LIST (\HasNoChildren) "." confirmed-ham
+* LIST (\HasNoChildren) "." TRASH
+* LIST (\HasNoChildren) "." SPAM
+* LIST (\HasNoChildren) "." SENT
+* LIST (\HasNoChildren) "." DRAFTS
+* LIST (\HasNoChildren) "." INBOX
+12 OK List completed (0.001 + 0.000 secs).
+
+[DRAFTS]
+[INBOX]
+[SENT]
+[SPAM]
+[TRASH]
+[confirmed-ham]
+[confirmed-spam]
+
+
+Folders sizes before the synchronization.
+You can remove foldersizes listings by using "--nofoldersizes" and "--nofoldersizesatend"
+but then you will also lose the ETA (Estimation Time of Arrival) given after each message copy.
+++++ Calculating sizes of 7 folders on Host1
+Host1 folder     1/7 [DRAFTS]                            Size:         0 Messages:     0 Biggest:         0
+Host1 folder     2/7 [INBOX]                             Size: 3523238904 Messages:  7553 Biggest:  26549018
+Host1 folder     3/7 [SENT]                              Size:         0 Messages:     0 Biggest:         0
+Host1 folder     4/7 [SPAM]                              Size:     22905 Messages:     3 Biggest:     17156
+Host1 folder     5/7 [TRASH]                             Size:     27899 Messages:     3 Biggest:     14362
+Host1 folder     6/7 [confirmed-ham]                     Size:         0 Messages:     0 Biggest:         0
+Host1 folder     7/7 [confirmed-spam]                    Size:         0 Messages:     0 Biggest:         0
+Host1 Nb folders:                7 folders
+Host1 Nb messages:            7559 messages
+Host1 Total size:       3523289708 bytes (3.281 GiB)
+Host1 Biggest message:    26549018 bytes (25.319 MiB)
+Host1 Time spent:              1.9 seconds
+++++ Calculating sizes of 7 folders on Host2
+Host2 folder     1/7 [DRAFTS]                            Size:         0 Messages:     0 Biggest:         0
+Host2 folder     2/7 [INBOX]                             Size: 3720789746 Messages:  7725 Biggest:  26549018
+Host2 folder     3/7 [SENT]                              Size:         0 Messages:     0 Biggest:         0
+Host2 folder     4/7 [SPAM]                              Size:     22905 Messages:     3 Biggest:     17156
+Host2 folder     5/7 [TRASH]                             Size:     27899 Messages:     3 Biggest:     14362
+Host2 folder     6/7 [confirmed-ham]                     Size:         0 Messages:     0 Biggest:         0
+Host2 folder     7/7 [confirmed-spam]                    Size:         0 Messages:     0 Biggest:         0
+Host2 Nb folders:                7 folders
+Host2 Nb messages:            7731 messages
+Host2 Total size:       3720840550 bytes (3.465 GiB)
+Host2 Biggest message:    26549018 bytes (25.319 MiB)
+Host2 Time spent:              0.7 seconds
+++++ Looping on each one of 7 folders to sync
+Folder     1/7 [DRAFTS]                            -> [DRAFTS]                           
+Host1: folder [DRAFTS] has 0 messages in total (mentioned by SELECT)
+Host2: folder [DRAFTS] has 0 messages in total (mentioned by SELECT)
+Host2: folder [DRAFTS] permanentflags: 
+Host1: folder [DRAFTS] considering 0 messages
+Host2: folder [DRAFTS] considering 0 messages
+Host1: folder [DRAFTS] selected 0 messages, duplicates 0
+Host2: folder [DRAFTS] selected 0 messages, duplicates 0
+Folder     2/7 [INBOX]                             -> [INBOX]                            
+Host1: folder [INBOX] has 7553 messages in total (mentioned by SELECT)
+Host2: folder [INBOX] has 7725 messages in total (mentioned by SELECT)
+Host2: folder [INBOX] permanentflags: 
+Host1: folder [INBOX] considering 7553 messages
+Host2: folder [INBOX] considering 7725 messages
+Host1: folder [INBOX] selected 7553 messages, duplicates 0
+Host2: folder [INBOX] selected 7725 messages, duplicates 172
+msg INBOX/338 {4584}          copied to INBOX/7726       0.00 msgs/s  0.016 KiB/s 4.477 KiB copied ETA: Mon Oct 14 07:20:43 2019  2027410 s  7422/7559 msgs left
+msg INBOX/801 {1631}          copied to INBOX/7727       0.01 msgs/s  0.022 KiB/s 6.069 KiB copied ETA: Tue Oct  1 22:52:46 2019  960133 s  7026/7559 msgs left
+msg INBOX/908 {1893787}       copied to INBOX/7728       0.01 msgs/s  6.738 KiB/s 1.812 MiB copied ETA: Sat Sep 28 04:46:46 2019  635771 s  6926/7559 msgs left
+msg INBOX/909 {317841}        copied to INBOX/7729       0.01 msgs/s  7.851 KiB/s 2.115 MiB copied ETA: Thu Sep 26 08:50:22 2019  477586 s  6925/7559 msgs left
+msg INBOX/913 {151780}        copied to INBOX/7730       0.02 msgs/s  8.382 KiB/s 2.260 MiB copied ETA: Wed Sep 25 06:19:56 2019  382161 s  6921/7559 msgs left
+msg INBOX/1453 {3904}         copied to INBOX/7731       0.02 msgs/s  8.390 KiB/s 2.264 MiB copied ETA: Tue Sep 24 06:13:20 2019  295364 s  6415/7559 msgs left
+msg INBOX/1693 {8765}         copied to INBOX/7732       0.03 msgs/s  8.417 KiB/s 2.272 MiB copied ETA: Mon Sep 23 16:00:53 2019  244217 s  6185/7559 msgs left
+msg INBOX/1694 {1543242}      copied to INBOX/7733       0.03 msgs/s  13.816 KiB/s 3.744 MiB copied ETA: Mon Sep 23 07:45:19 2019  214482 s  6184/7559 msgs left
+msg INBOX/2113 {7369}         copied to INBOX/7734       0.03 msgs/s  13.834 KiB/s 3.751 MiB copied ETA: Sun Sep 22 21:41:42 2019  178264 s  5779/7559 msgs left
+msg INBOX/2114 {25018}        copied to INBOX/7735       0.04 msgs/s  13.914 KiB/s 3.775 MiB copied ETA: Sun Sep 22 16:45:46 2019  160508 s  5778/7559 msgs left
+msg INBOX/2115 {25433}        copied to INBOX/7736       0.04 msgs/s  13.995 KiB/s 3.799 MiB copied ETA: Sun Sep 22 12:43:33 2019  145975 s  5777/7559 msgs left
+msg INBOX/2130 {8162}         copied to INBOX/7737       0.04 msgs/s  14.017 KiB/s 3.807 MiB copied ETA: Sun Sep 22 09:16:08 2019  133530 s  5762/7559 msgs left
+msg INBOX/2131 {27806}        copied to INBOX/7738       0.05 msgs/s  14.107 KiB/s 3.833 MiB copied ETA: Sun Sep 22 06:25:42 2019  123304 s  5761/7559 msgs left
+msg INBOX/2132 {45122}        copied to INBOX/7739       0.05 msgs/s  14.255 KiB/s 3.876 MiB copied ETA: Sun Sep 22 03:59:57 2019  114559 s  5760/7559 msgs left
+msg INBOX/2215 {21240}        copied to INBOX/7740       0.05 msgs/s  14.322 KiB/s 3.896 MiB copied ETA: Sun Sep 22 01:27:58 2019  105439 s  5677/7559 msgs left
+msg INBOX/2216 {38494}        copied to INBOX/7741       0.06 msgs/s  14.450 KiB/s 3.933 MiB copied ETA: Sat Sep 21 23:38:37 2019  98878 s  5676/7559 msgs left
+msg INBOX/2217 {54606}        copied to INBOX/7742       0.06 msgs/s  14.633 KiB/s 3.985 MiB copied ETA: Sat Sep 21 22:02:12 2019  93094 s  5675/7559 msgs left
+msg INBOX/2241 {7724}         copied to INBOX/7743       0.06 msgs/s  14.654 KiB/s 3.993 MiB copied ETA: Sat Sep 21 20:30:29 2019  87590 s  5651/7559 msgs left
+msg INBOX/2242 {26891}        copied to INBOX/7744       0.07 msgs/s  14.740 KiB/s 4.018 MiB copied ETA: Sat Sep 21 19:14:07 2019  83008 s  5650/7559 msgs left
+msg INBOX/2243 {7062}         copied to INBOX/7745       0.07 msgs/s  14.758 KiB/s 4.025 MiB copied ETA: Sat Sep 21 18:05:21 2019  78882 s  5649/7559 msgs left
+msg INBOX/2270 {7778}         copied to INBOX/7746       0.08 msgs/s  14.778 KiB/s 4.032 MiB copied ETA: Sat Sep 21 16:57:23 2019  74804 s  5622/7559 msgs left
+msg INBOX/2350 {26084}        copied to INBOX/7747       0.08 msgs/s  14.860 KiB/s 4.057 MiB copied ETA: Sat Sep 21 15:44:52 2019  70453 s  5544/7559 msgs left
+msg INBOX/2351 {25501}        copied to INBOX/7748       0.08 msgs/s  14.941 KiB/s 4.082 MiB copied ETA: Sat Sep 21 14:54:14 2019  67414 s  5543/7559 msgs left
+msg INBOX/2631 {8231}         copied to INBOX/7749       0.09 msgs/s  14.960 KiB/s 4.089 MiB copied ETA: Sat Sep 21 13:14:08 2019  61408 s  5265/7559 msgs left
+msg INBOX/2632 {27352}        copied to INBOX/7750       0.09 msgs/s  15.046 KiB/s 4.115 MiB copied ETA: Sat Sep 21 12:33:36 2019  58976 s  5264/7559 msgs left
+msg INBOX/2702 {6994}         copied to INBOX/7751       0.09 msgs/s  15.061 KiB/s 4.122 MiB copied ETA: Sat Sep 21 11:44:00 2019  55999 s  5195/7559 msgs left
+msg INBOX/2703 {24883}        copied to INBOX/7752       0.10 msgs/s  15.139 KiB/s 4.146 MiB copied ETA: Sat Sep 21 11:09:47 2019  53947 s  5194/7559 msgs left
+msg INBOX/2704 {43198}        copied to INBOX/7753       0.10 msgs/s  15.280 KiB/s 4.187 MiB copied ETA: Sat Sep 21 10:38:01 2019  52040 s  5193/7559 msgs left
+msg INBOX/2705 {59977}        copied to INBOX/7754       0.10 msgs/s  15.479 KiB/s 4.244 MiB copied ETA: Sat Sep 21 10:08:30 2019  50269 s  5192/7559 msgs left
+msg INBOX/2706 {59638}        copied to INBOX/7755       0.11 msgs/s  15.678 KiB/s 4.301 MiB copied ETA: Sat Sep 21 09:40:51 2019  48610 s  5191/7559 msgs left
+msg INBOX/2707 {76392}        copied to INBOX/7756       0.11 msgs/s  15.934 KiB/s 4.374 MiB copied ETA: Sat Sep 21 09:15:03 2019  47062 s  5190/7559 msgs left
+msg INBOX/2710 {76680}        copied to INBOX/7757       0.11 msgs/s  16.190 KiB/s 4.447 MiB copied ETA: Sat Sep 21 08:50:35 2019  45594 s  5187/7559 msgs left
+msg INBOX/2711 {93638}        copied to INBOX/7758       0.12 msgs/s  16.505 KiB/s 4.536 MiB copied ETA: Sat Sep 21 08:27:50 2019  44229 s  5186/7559 msgs left
+msg INBOX/2713 {110487}       copied to INBOX/7759       0.12 msgs/s  16.878 KiB/s 4.642 MiB copied ETA: Sat Sep 21 08:06:20 2019  42938 s  5184/7559 msgs left
+msg INBOX/2715 {7247}         copied to INBOX/7760       0.12 msgs/s  16.895 KiB/s 4.649 MiB copied ETA: Sat Sep 21 07:45:58 2019  41716 s  5182/7559 msgs left
+msg INBOX/2777 {25070}        copied to INBOX/7761       0.13 msgs/s  16.974 KiB/s 4.673 MiB copied ETA: Sat Sep 21 07:19:00 2019  40098 s  5121/7559 msgs left
+msg INBOX/2779 {43581}        copied to INBOX/7762       0.13 msgs/s  17.116 KiB/s 4.714 MiB copied ETA: Sat Sep 21 07:01:01 2019  39020 s  5119/7559 msgs left
+msg INBOX/2862 {24830}        copied to INBOX/7763       0.13 msgs/s  17.193 KiB/s 4.738 MiB copied ETA: Sat Sep 21 06:34:07 2019  37405 s  5037/7559 msgs left
+msg INBOX/2863 {24866}        copied to INBOX/7764       0.14 msgs/s  17.270 KiB/s 4.762 MiB copied ETA: Sat Sep 21 06:18:20 2019  36457 s  5036/7559 msgs left
+msg INBOX/4386 {2509}         copied to INBOX/7765       0.14 msgs/s  17.266 KiB/s 4.764 MiB copied ETA: Sat Sep 21 03:05:13 2019  24870 s  3521/7559 msgs left
+msg INBOX/4387 {3817}         copied to INBOX/7766       0.15 msgs/s  17.270 KiB/s 4.768 MiB copied ETA: Sat Sep 21 02:55:12 2019  24269 s  3520/7559 msgs left
+msg INBOX/4510 {127615}       copied to INBOX/7767       0.15 msgs/s  17.700 KiB/s 4.889 MiB copied ETA: Sat Sep 21 02:32:01 2019  22879 s  3397/7559 msgs left
+msg INBOX/4514 {25994}        copied to INBOX/7768       0.15 msgs/s  17.778 KiB/s 4.914 MiB copied ETA: Sat Sep 21 02:22:58 2019  22335 s  3393/7559 msgs left
+msg INBOX/5186 {26549018}     copied to INBOX/7769       0.15 msgs/s  103.464 KiB/s 30.233 MiB copied ETA: Sat Sep 21 01:20:04 2019  18545 s  2727/7559 msgs left
+msg INBOX/5192 {8899009}      copied to INBOX/7770       0.15 msgs/s  130.358 KiB/s 38.720 MiB copied ETA: Sat Sep 21 01:17:42 2019  18398 s  2722/7559 msgs left
+msg INBOX/5203 {270046}       copied to INBOX/7771       0.15 msgs/s  131.062 KiB/s 38.978 MiB copied ETA: Sat Sep 21 01:10:12 2019  17948 s  2711/7559 msgs left
+msg INBOX/5246 {10155}        copied to INBOX/7772       0.15 msgs/s  131.013 KiB/s 38.987 MiB copied ETA: Sat Sep 21 00:59:23 2019  17298 s  2668/7559 msgs left
+msg INBOX/5248 {10129}        copied to INBOX/7773       0.16 msgs/s  130.979 KiB/s 38.997 MiB copied ETA: Sat Sep 21 00:53:18 2019  16933 s  2666/7559 msgs left
+msg INBOX/5249 {2329}         copied to INBOX/7774       0.16 msgs/s  130.926 KiB/s 38.999 MiB copied ETA: Sat Sep 21 00:47:34 2019  16589 s  2665/7559 msgs left
+msg INBOX/5251 {11895}        copied to INBOX/7775       0.16 msgs/s  130.902 KiB/s 39.010 MiB copied ETA: Sat Sep 21 00:41:58 2019  16253 s  2663/7559 msgs left
+msg INBOX/5253 {21403}        copied to INBOX/7776       0.17 msgs/s  130.897 KiB/s 39.031 MiB copied ETA: Sat Sep 21 00:36:36 2019  15931 s  2661/7559 msgs left
+msg INBOX/5255 {30643}        copied to INBOX/7777       0.17 msgs/s  130.908 KiB/s 39.060 MiB copied ETA: Sat Sep 21 00:31:29 2019  15624 s  2659/7559 msgs left
+msg INBOX/5266 {96273}        copied to INBOX/7778       0.17 msgs/s  131.093 KiB/s 39.152 MiB copied ETA: Sat Sep 21 00:25:45 2019  15280 s  2648/7559 msgs left
+msg INBOX/5269 {2276}         copied to INBOX/7779       0.18 msgs/s  131.036 KiB/s 39.154 MiB copied ETA: Sat Sep 21 00:20:53 2019  14987 s  2645/7559 msgs left
+msg INBOX/5272 {31802}        copied to INBOX/7780       0.18 msgs/s  131.061 KiB/s 39.184 MiB copied ETA: Sat Sep 21 00:16:12 2019  14707 s  2642/7559 msgs left
+msg INBOX/5282 {4431676}      copied to INBOX/7781       0.18 msgs/s  144.122 KiB/s 43.411 MiB copied ETA: Sat Sep 21 00:12:45 2019  14497 s  2632/7559 msgs left
+msg INBOX/5284 {65125}        copied to INBOX/7782       0.18 msgs/s  144.244 KiB/s 43.473 MiB copied ETA: Sat Sep 21 00:08:28 2019  14240 s  2630/7559 msgs left
+msg INBOX/5294 {298104}       copied to INBOX/7783       0.19 msgs/s  145.059 KiB/s 43.757 MiB copied ETA: Sat Sep 21 00:03:42 2019  13953 s  2620/7559 msgs left
+msg INBOX/5322 {115745}       copied to INBOX/7784       0.19 msgs/s  145.321 KiB/s 43.868 MiB copied ETA: Fri Sep 20 23:57:29 2019  13580 s  2592/7559 msgs left
+msg INBOX/5348 {197128}       copied to INBOX/7785       0.19 msgs/s  145.831 KiB/s 44.056 MiB copied ETA: Fri Sep 20 23:51:39 2019  13230 s  2566/7559 msgs left
+msg INBOX/5373 {179436}       copied to INBOX/7786       0.20 msgs/s  146.295 KiB/s 44.227 MiB copied ETA: Fri Sep 20 23:46:05 2019  12895 s  2541/7559 msgs left
+msg INBOX/5376 {244096}       copied to INBOX/7787       0.20 msgs/s  146.937 KiB/s 44.459 MiB copied ETA: Fri Sep 20 23:42:33 2019  12683 s  2538/7559 msgs left
+msg INBOX/5400 {293279}       copied to INBOX/7788       0.20 msgs/s  147.737 KiB/s 44.739 MiB copied ETA: Fri Sep 20 23:37:24 2019  12374 s  2514/7559 msgs left
+msg INBOX/5404 {188988}       copied to INBOX/7789       0.21 msgs/s  148.204 KiB/s 44.919 MiB copied ETA: Fri Sep 20 23:34:02 2019  12172 s  2510/7559 msgs left
+msg INBOX/5413 {68161}        copied to INBOX/7790       0.21 msgs/s  148.335 KiB/s 44.984 MiB copied ETA: Fri Sep 20 23:30:19 2019  11949 s  2501/7559 msgs left
+msg INBOX/5469 {106221}       copied to INBOX/7791       0.21 msgs/s  148.563 KiB/s 45.086 MiB copied ETA: Fri Sep 20 23:23:03 2019  11512 s  2445/7559 msgs left
+msg INBOX/5470 {66702}        copied to INBOX/7792       0.22 msgs/s  148.688 KiB/s 45.149 MiB copied ETA: Fri Sep 20 23:20:13 2019  11342 s  2444/7559 msgs left
+msg INBOX/5719 {2365}         copied to INBOX/7793       0.22 msgs/s  148.622 KiB/s 45.152 MiB copied ETA: Fri Sep 20 22:58:37 2019  10046 s  2196/7559 msgs left
+msg INBOX/5730 {2408}         copied to INBOX/7794       0.22 msgs/s  148.572 KiB/s 45.154 MiB copied ETA: Fri Sep 20 22:55:31 2019  9860 s  2186/7559 msgs left
+msg INBOX/5746 {329414}       copied to INBOX/7795       0.22 msgs/s  149.475 KiB/s 45.468 MiB copied ETA: Fri Sep 20 22:52:07 2019  9656 s  2170/7559 msgs left
+msg INBOX/5747 {65834}        copied to INBOX/7796       0.23 msgs/s  149.580 KiB/s 45.531 MiB copied ETA: Fri Sep 20 22:49:54 2019  9522 s  2169/7559 msgs left
+msg INBOX/5846 {10386}        copied to INBOX/7797       0.23 msgs/s  149.544 KiB/s 45.541 MiB copied ETA: Fri Sep 20 22:40:46 2019  8974 s  2072/7559 msgs left
+msg INBOX/5847 {9666}         copied to INBOX/7798       0.23 msgs/s  149.503 KiB/s 45.550 MiB copied ETA: Fri Sep 20 22:38:43 2019  8851 s  2071/7559 msgs left
+msg INBOX/5848 {19481}        copied to INBOX/7799       0.24 msgs/s  149.496 KiB/s 45.568 MiB copied ETA: Fri Sep 20 22:36:43 2019  8731 s  2070/7559 msgs left
+msg INBOX/5850 {13097910}     copied to INBOX/7800       0.23 msgs/s  185.501 KiB/s 58.060 MiB copied ETA: Fri Sep 20 22:38:38 2019  8837 s  2068/7559 msgs left
+msg INBOX/5851 {8723520}      copied to INBOX/7801       0.23 msgs/s  209.122 KiB/s 66.379 MiB copied ETA: Fri Sep 20 22:38:45 2019  8840 s  2067/7559 msgs left
+msg INBOX/5853 {8725845}      copied to INBOX/7802       0.23 msgs/s  232.019 KiB/s 74.701 MiB copied ETA: Fri Sep 20 22:38:51 2019  8842 s  2065/7559 msgs left
+msg INBOX/5854 {13099961}     copied to INBOX/7803       0.23 msgs/s  266.980 KiB/s 87.194 MiB copied ETA: Fri Sep 20 22:39:04 2019  8850 s  2064/7559 msgs left
+msg INBOX/5924 {229389}       copied to INBOX/7804       0.24 msgs/s  267.337 KiB/s 87.412 MiB copied ETA: Fri Sep 20 22:32:26 2019  8451 s  1994/7559 msgs left
+msg INBOX/5928 {4326700}      copied to INBOX/7805       0.24 msgs/s  277.823 KiB/s 91.539 MiB copied ETA: Fri Sep 20 22:31:30 2019  8393 s  1990/7559 msgs left
+msg INBOX/5942 {558881}       copied to INBOX/7806       0.24 msgs/s  279.112 KiB/s 92.072 MiB copied ETA: Fri Sep 20 22:28:58 2019  8240 s  1976/7559 msgs left
+msg INBOX/5965 {453816}       copied to INBOX/7807       0.24 msgs/s  280.170 KiB/s 92.505 MiB copied ETA: Fri Sep 20 22:25:50 2019  8052 s  1953/7559 msgs left
+msg INBOX/6202 {2357}         copied to INBOX/7808       0.25 msgs/s  280.047 KiB/s 92.507 MiB copied ETA: Fri Sep 20 22:08:24 2019  7006 s  1719/7559 msgs left
+msg INBOX/6254 {282163}       copied to INBOX/7809       0.25 msgs/s  280.656 KiB/s 92.776 MiB copied ETA: Fri Sep 20 22:03:36 2019  6718 s  1667/7559 msgs left
+msg INBOX/6491 {1043435}      copied to INBOX/7810       0.25 msgs/s  283.130 KiB/s 93.771 MiB copied ETA: Fri Sep 20 21:46:56 2019  5718 s  1433/7559 msgs left
+msg INBOX/7649 {449428}       copied to INBOX/7811       0.25 msgs/s  284.047 KiB/s 94.200 MiB copied ETA: Fri Sep 20 20:31:00 2019  1161 s  294/7559 msgs left
+Folder     3/7 [SENT]                              -> [SENT]                             
+Host1: folder [SENT] has 0 messages in total (mentioned by SELECT)
+Host2: folder [SENT] has 0 messages in total (mentioned by SELECT)
+Host2: folder [SENT] permanentflags: 
+Host1: folder [SENT] considering 0 messages
+Host2: folder [SENT] considering 0 messages
+Host1: folder [SENT] selected 0 messages, duplicates 0
+Host2: folder [SENT] selected 0 messages, duplicates 0
+Folder     4/7 [SPAM]                              -> [SPAM]                             
+Host1: folder [SPAM] has 3 messages in total (mentioned by SELECT)
+Host2: folder [SPAM] has 3 messages in total (mentioned by SELECT)
+Host2: folder [SPAM] permanentflags: 
+Host1: folder [SPAM] considering 3 messages
+Host2: folder [SPAM] considering 3 messages
+Host1: folder [SPAM] selected 3 messages, duplicates 0
+Host2: folder [SPAM] selected 3 messages, duplicates 0
+Folder     5/7 [TRASH]                             -> [TRASH]                            
+Host1: folder [TRASH] has 3 messages in total (mentioned by SELECT)
+Host2: folder [TRASH] has 3 messages in total (mentioned by SELECT)
+Host2: folder [TRASH] permanentflags: 
+Host1: folder [TRASH] considering 3 messages
+Host2: folder [TRASH] considering 3 messages
+Host1: folder [TRASH] selected 3 messages, duplicates 0
+Host2: folder [TRASH] selected 3 messages, duplicates 0
+Folder     6/7 [confirmed-ham]                     -> [confirmed-ham]                    
+Host1: folder [confirmed-ham] has 0 messages in total (mentioned by SELECT)
+Host2: folder [confirmed-ham] has 0 messages in total (mentioned by SELECT)
+Host2: folder [confirmed-ham] permanentflags: 
+Host1: folder [confirmed-ham] considering 0 messages
+Host2: folder [confirmed-ham] considering 0 messages
+Host1: folder [confirmed-ham] selected 0 messages, duplicates 0
+Host2: folder [confirmed-ham] selected 0 messages, duplicates 0
+Folder     7/7 [confirmed-spam]                    -> [confirmed-spam]                   
+Host1: folder [confirmed-spam] has 0 messages in total (mentioned by SELECT)
+Host2: folder [confirmed-spam] has 0 messages in total (mentioned by SELECT)
+Host2: folder [confirmed-spam] permanentflags: 
+Host1: folder [confirmed-spam] considering 0 messages
+Host2: folder [confirmed-spam] considering 0 messages
+Host1: folder [confirmed-spam] selected 0 messages, duplicates 0
+Host2: folder [confirmed-spam] selected 0 messages, duplicates 0
+++++ End looping on each folder
+
+Folders sizes after the synchronization.
+You can remove this foldersizes listing by using  "--nofoldersizesatend"
+++++ Calculating sizes of 7 folders on Host1
+Host1 folder     1/7 [DRAFTS]                            Size:         0 Messages:     0 Biggest:         0
+Host1 folder     2/7 [INBOX]                             Size: 3523238904 Messages:  7553 Biggest:  26549018
+Host1 folder     3/7 [SENT]                              Size:         0 Messages:     0 Biggest:         0
+Host1 folder     4/7 [SPAM]                              Size:     22905 Messages:     3 Biggest:     17156
+Host1 folder     5/7 [TRASH]                             Size:     27899 Messages:     3 Biggest:     14362
+Host1 folder     6/7 [confirmed-ham]                     Size:         0 Messages:     0 Biggest:         0
+Host1 folder     7/7 [confirmed-spam]                    Size:         0 Messages:     0 Biggest:         0
+Host1 Nb folders:                7 folders
+Host1 Nb messages:            7559 messages
+Host1 Total size:       3523289708 bytes (3.281 GiB)
+Host1 Biggest message:    26549018 bytes (25.319 MiB)
+Host1 Time spent:              1.0 seconds
+++++ Calculating sizes of 7 folders on Host2
+Host2 folder     1/7 [DRAFTS]                            Size:         0 Messages:     0 Biggest:         0
+Host2 folder     2/7 [INBOX]                             Size: 3819565167 Messages:  7811 Biggest:  26549018
+Host2 folder     3/7 [SENT]                              Size:         0 Messages:     0 Biggest:         0
+Host2 folder     4/7 [SPAM]                              Size:     22905 Messages:     3 Biggest:     17156
+Host2 folder     5/7 [TRASH]                             Size:     27899 Messages:     3 Biggest:     14362
+Host2 folder     6/7 [confirmed-ham]                     Size:         0 Messages:     0 Biggest:         0
+Host2 folder     7/7 [confirmed-spam]                    Size:         0 Messages:     0 Biggest:         0
+Host2 Nb folders:                7 folders
+Host2 Nb messages:            7817 messages
+Host2 Total size:       3819615971 bytes (3.557 GiB)
+Host2 Biggest message:    26549018 bytes (25.319 MiB)
+Host2 Time spent:              0.9 seconds
+++++ Statistics
+Transfer started on                     : Fri Sep 20 20:05:57 2019
+Transfer ended on                       : Fri Sep 20 20:11:42 2019
+Transfer time                           : 344.9 sec
+Folders synced                          : 7/7 synced
+Messages transferred                    : 86 
+Messages skipped                        : 7473
+Messages found duplicate on host1       : 0
+Messages found duplicate on host2       : 172
+Messages found crossduplicate on host2  : 0
+Messages void (noheader) on host1       : 0  
+Messages void (noheader) on host2       : 0
+Messages found in host1 not in host2    : 0 messages
+Messages found in host2 not in host1    : 86 messages
+Messages deleted on host1               : 0
+Messages deleted on host2               : 0
+Total bytes transferred                 : 98775421 (94.200 MiB)
+Total bytes skipped                     : 3424514287 (3.189 GiB)
+Message rate                            : 0.2 messages/s
+Average bandwidth rate                  : 279.6 KiB/s
+Reconnections to host1                  : 0
+Reconnections to host2                  : 0
+Memory consumption at the end           : 332.2 MiB (started with 221.7 MiB)
+Load end is                             : 0.22 0.20 0.18 1/220 on 1 cores
+Biggest message                         : 26549018 bytes (25.319 MiB)
+Memory/biggest message ratio            : 13.1
+Start difference host2 - host1          : 172 messages, 197550842 bytes (188.399 MiB)
+Final difference host2 - host1          : 258 messages, 296326263 bytes (282.599 MiB)
+The sync looks good, all 7559 identified messages in host1 are on host2.
+The sync is not strict, there are 86 messages in host2 that are not on host1. Use --delete2 to delete them and have a strict sync.
+Detected 0 errors
+
+Check if a new imapsync release is available by adding --releasecheck
+Homepage: https://imapsync.lamiral.info/
+Exiting with return value 0 (EX_OK: successful termination)
+Log file is LOG_imapsync/2019_09_20_20_05_57_664_d.garbaczewska@estella.eu_d.garbaczewska@estella.eu.txt ( to change it, use --logfile filepath ; or use --nolog to turn off logging )

@@ -1,0 +1,309 @@
+
+------------------------------------
+IMAPSync started - 2019-09-18 16:04:46
+Starting m.wesolowski 2019-09-18 16:04:46
+
+------------------------------------
+IMAPSync started - 2019-09-18 17:30:28
+Starting m.wesolowski 2019-09-18 17:30:28
+Finished m.wesolowski@estella.eu 2019-09-18 19:55:49
+
+Starting m.damaszka 2019-09-18 19:55:49
+Finished m.damaszka@estella.eu 2019-09-18 21:14:21
+
+Starting s.mucek 2019-09-18 21:14:21
+Finished s.mucek@estella.eu 2019-09-18 21:15:44
+
+Starting platnosci 2019-09-18 21:15:44
+Finished platnosci@estella.eu 2019-09-18 21:16:05
+
+Starting a.badecki 2019-09-18 21:16:05
+Finished a.badecki@estella.eu 2019-09-18 21:33:10
+
+Starting m.heleniak 2019-09-18 21:33:10
+Finished m.heleniak@estella.eu 2019-09-18 21:45:23
+
+Starting faktury 2019-09-18 21:45:23
+Finished faktury@estella.eu 2019-09-18 21:46:13
+
+Starting s.lipinski 2019-09-18 21:46:13
+Finished s.lipinski@estella.eu 2019-09-18 21:47:52
+
+Starting k.rotko 2019-09-18 21:47:52
+Finished k.rotko@estella.eu 2019-09-18 21:49:30
+
+Starting biuro 2019-09-18 21:49:30
+Finished biuro@estella.eu 2019-09-18 21:51:14
+
+Starting k.krysiak 2019-09-18 21:51:14
+Finished k.krysiak@estella.eu 2019-09-18 22:11:12
+
+Starting brother 2019-09-18 22:11:12
+Finished brother@estella.eu 2019-09-18 22:11:17
+
+Starting d.garbaczewska 2019-09-18 22:11:17
+Finished d.garbaczewska@estella.eu 2019-09-18 22:51:12
+
+Starting praca 2019-09-18 22:51:12
+Finished praca@estella.eu 2019-09-18 22:51:18
+
+Starting r.kosior 2019-09-18 22:51:18
+Finished r.kosior@estella.eu 2019-09-18 22:51:36
+
+Starting zamowienia 2019-09-18 22:51:36
+Finished zamowienia@estella.eu 2019-09-18 22:54:46
+
+Starting g.rogalska 2019-09-18 22:54:46
+Finished g.rogalska@estella.eu 2019-09-18 22:57:34
+
+
+IMAPSync Finished - 2019-09-18 22:57:34
+------------------------------------
+
+------------------------------------
+IMAPSync started - 2019-09-19 08:06:15
+Starting m.wesolowski 2019-09-19 08:06:15
+Finished m.wesolowski@estella.eu 2019-09-19 08:38:13
+
+Starting m.damaszka 2019-09-19 08:38:13
+Finished m.damaszka@estella.eu 2019-09-19 08:50:41
+
+Starting s.mucek 2019-09-19 08:50:41
+Finished s.mucek@estella.eu 2019-09-19 08:51:00
+
+Starting platnosci 2019-09-19 08:51:00
+Finished platnosci@estella.eu 2019-09-19 08:51:07
+
+Starting a.badecki 2019-09-19 08:51:07
+Finished a.badecki@estella.eu 2019-09-19 08:54:53
+
+Starting m.heleniak 2019-09-19 08:54:53
+Finished m.heleniak@estella.eu 2019-09-19 08:57:14
+
+Starting faktury 2019-09-19 08:57:14
+Finished faktury@estella.eu 2019-09-19 08:57:32
+
+Starting s.lipinski 2019-09-19 08:57:32
+Finished s.lipinski@estella.eu 2019-09-19 08:58:01
+
+Starting k.rotko 2019-09-19 08:58:01
+Finished k.rotko@estella.eu 2019-09-19 08:58:17
+
+Starting biuro 2019-09-19 08:58:17
+Finished biuro@estella.eu 2019-09-19 08:58:54
+
+Starting k.krysiak 2019-09-19 08:58:54
+Finished k.krysiak@estella.eu 2019-09-19 08:59:44
+
+Starting brother 2019-09-19 08:59:44
+Finished brother@estella.eu 2019-09-19 08:59:47
+
+Starting d.garbaczewska 2019-09-19 08:59:47
+Finished d.garbaczewska@estella.eu 2019-09-19 09:06:04
+
+Starting praca 2019-09-19 09:06:04
+Finished praca@estella.eu 2019-09-19 09:06:07
+
+Starting r.kosior 2019-09-19 09:06:07
+Finished r.kosior@estella.eu 2019-09-19 09:06:14
+
+Starting zamowienia 2019-09-19 09:06:14
+Finished zamowienia@estella.eu 2019-09-19 09:06:42
+
+Starting g.rogalska 2019-09-19 09:06:42
+Finished g.rogalska@estella.eu 2019-09-19 09:07:15
+
+Starting a.jendryczka 2019-09-19 09:07:15
+Finished a.jendryczka@estella.eu 2019-09-19 09:14:47
+
+
+IMAPSync Finished - 2019-09-19 09:14:47
+------------------------------------
+
+------------------------------------
+IMAPSync started - 2019-09-19 14:52:23
+Starting m.wesolowski 2019-09-19 14:52:23
+Finished m.wesolowski@estella.eu 2019-09-19 15:21:28
+
+Starting m.damaszka 2019-09-19 15:21:28
+Finished m.damaszka@estella.eu 2019-09-19 15:33:09
+
+Starting s.mucek 2019-09-19 15:33:09
+Finished s.mucek@estella.eu 2019-09-19 15:33:33
+
+Starting platnosci 2019-09-19 15:33:33
+Finished platnosci@estella.eu 2019-09-19 15:33:39
+
+Starting a.badecki 2019-09-19 15:33:39
+Finished a.badecki@estella.eu 2019-09-19 15:36:56
+
+Starting m.heleniak 2019-09-19 15:36:56
+Finished m.heleniak@estella.eu 2019-09-19 15:39:00
+
+Starting faktury 2019-09-19 15:39:00
+Finished faktury@estella.eu 2019-09-19 15:39:16
+
+Starting s.lipinski 2019-09-19 15:39:16
+Finished s.lipinski@estella.eu 2019-09-19 15:39:42
+
+Starting k.rotko 2019-09-19 15:39:42
+Finished k.rotko@estella.eu 2019-09-19 15:39:56
+
+Starting biuro 2019-09-19 15:39:56
+Finished biuro@estella.eu 2019-09-19 15:40:37
+
+Starting k.krysiak 2019-09-19 15:40:37
+Finished k.krysiak@estella.eu 2019-09-19 15:41:09
+
+Starting brother 2019-09-19 15:41:09
+Finished brother@estella.eu 2019-09-19 15:41:12
+
+Starting d.garbaczewska 2019-09-19 15:41:12
+Finished d.garbaczewska@estella.eu 2019-09-19 15:46:35
+
+Starting praca 2019-09-19 15:46:35
+Finished praca@estella.eu 2019-09-19 15:46:38
+
+Starting r.kosior 2019-09-19 15:46:38
+Finished r.kosior@estella.eu 2019-09-19 15:46:48
+
+Starting zamowienia 2019-09-19 15:46:48
+Finished zamowienia@estella.eu 2019-09-19 15:47:13
+
+Starting g.rogalska 2019-09-19 15:47:13
+Finished g.rogalska@estella.eu 2019-09-19 15:47:44
+
+Starting a.jendryczka 2019-09-19 15:47:44
+Finished a.jendryczka@estella.eu 2019-09-19 15:49:14
+
+
+IMAPSync Finished - 2019-09-19 15:49:14
+------------------------------------
+
+------------------------------------
+IMAPSync started - 2019-09-20 19:01:02
+Starting m.wesolowski 2019-09-20 19:01:02
+
+------------------------------------
+IMAPSync started - 2019-09-20 19:05:17
+Starting m.wesolowski 2019-09-20 19:05:17
+Finished m.wesolowski@estella.eu 2019-09-20 19:34:32
+
+Starting m.damaszka 2019-09-20 19:34:32
+Finished m.damaszka@estella.eu 2019-09-20 19:56:43
+
+Starting s.mucek 2019-09-20 19:56:43
+Finished s.mucek@estella.eu 2019-09-20 19:57:01
+
+Starting platnosci 2019-09-20 19:57:01
+Finished platnosci@estella.eu 2019-09-20 19:57:07
+
+Starting a.badecki 2019-09-20 19:57:07
+Finished a.badecki@estella.eu 2019-09-20 20:01:14
+
+Starting m.heleniak 2019-09-20 20:01:14
+Finished m.heleniak@estella.eu 2019-09-20 20:03:30
+
+Starting faktury 2019-09-20 20:03:30
+Finished faktury@estella.eu 2019-09-20 20:03:44
+
+Starting s.lipinski 2019-09-20 20:03:44
+Finished s.lipinski@estella.eu 2019-09-20 20:04:17
+
+Starting k.rotko 2019-09-20 20:04:17
+Finished k.rotko@estella.eu 2019-09-20 20:04:33
+
+Starting biuro 2019-09-20 20:04:33
+Finished biuro@estella.eu 2019-09-20 20:05:26
+
+Starting k.krysiak 2019-09-20 20:05:26
+Finished k.krysiak@estella.eu 2019-09-20 20:05:54
+
+Starting brother 2019-09-20 20:05:54
+Finished brother@estella.eu 2019-09-20 20:05:57
+
+Starting d.garbaczewska 2019-09-20 20:05:57
+Finished d.garbaczewska@estella.eu 2019-09-20 20:11:42
+
+Starting praca 2019-09-20 20:11:42
+Finished praca@estella.eu 2019-09-20 20:11:45
+
+Starting r.kosior 2019-09-20 20:11:45
+Finished r.kosior@estella.eu 2019-09-20 20:11:55
+
+Starting zamowienia 2019-09-20 20:11:55
+Finished zamowienia@estella.eu 2019-09-20 20:12:20
+
+Starting g.rogalska 2019-09-20 20:12:20
+Finished g.rogalska@estella.eu 2019-09-20 20:12:49
+
+Starting a.jendryczka 2019-09-20 20:12:49
+Finished a.jendryczka@estella.eu 2019-09-20 20:14:18
+
+
+IMAPSync Finished - 2019-09-20 20:14:18
+------------------------------------
+
+------------------------------------
+IMAPSync started - 2019-09-20 20:45:23
+Starting m.wesolowski 2019-09-20 20:45:23
+
+------------------------------------
+IMAPSync started - 2019-09-21 07:25:55
+Starting m.wesolowski 2019-09-21 07:25:55
+Finished m.wesolowski@estella.eu 2019-09-21 07:25:57
+
+Starting m.damaszka 2019-09-21 07:25:57
+Finished m.damaszka@estella.eu 2019-09-21 07:25:59
+
+Starting s.mucek 2019-09-21 07:25:59
+Finished s.mucek@estella.eu 2019-09-21 07:26:01
+
+Starting platnosci 2019-09-21 07:26:01
+Finished platnosci@estella.eu 2019-09-21 07:26:02
+
+Starting a.badecki 2019-09-21 07:26:02
+Finished a.badecki@estella.eu 2019-09-21 07:26:03
+
+Starting m.heleniak 2019-09-21 07:26:03
+Finished m.heleniak@estella.eu 2019-09-21 07:26:04
+
+Starting faktury 2019-09-21 07:26:04
+Finished faktury@estella.eu 2019-09-21 07:26:05
+
+Starting s.lipinski 2019-09-21 07:26:05
+Finished s.lipinski@estella.eu 2019-09-21 07:26:06
+
+Starting k.rotko 2019-09-21 07:26:06
+Finished k.rotko@estella.eu 2019-09-21 07:26:08
+
+Starting biuro 2019-09-21 07:26:08
+Finished biuro@estella.eu 2019-09-21 07:26:10
+
+Starting k.krysiak 2019-09-21 07:26:10
+Finished k.krysiak@estella.eu 2019-09-21 07:26:11
+
+Starting brother 2019-09-21 07:26:11
+Finished brother@estella.eu 2019-09-21 07:26:13
+
+Starting d.garbaczewska 2019-09-21 07:26:13
+Finished d.garbaczewska@estella.eu 2019-09-21 07:26:15
+
+Starting praca 2019-09-21 07:26:15
+Finished praca@estella.eu 2019-09-21 07:26:17
+
+Starting r.kosior 2019-09-21 07:26:17
+Finished r.kosior@estella.eu 2019-09-21 07:26:18
+
+Starting zamowienia 2019-09-21 07:26:18
+Finished zamowienia@estella.eu 2019-09-21 07:26:19
+
+Starting g.rogalska 2019-09-21 07:26:19
+Finished g.rogalska@estella.eu 2019-09-21 07:26:21
+
+Starting a.jendryczka 2019-09-21 07:26:21
+Finished a.jendryczka@estella.eu 2019-09-21 07:26:23
+
+
+IMAPSync Finished - 2019-09-21 07:26:23
+------------------------------------

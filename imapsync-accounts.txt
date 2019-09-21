@@ -1,3 +1,0 @@
-skrzynka.1;haslo
-skrzynka.2;haslo
-

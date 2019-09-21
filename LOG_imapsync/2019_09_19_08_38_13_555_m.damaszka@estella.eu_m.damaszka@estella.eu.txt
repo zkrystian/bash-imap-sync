@@ -1,0 +1,685 @@
+Here is imapsync 1.945 on host noc, a linux system with 0.4/1.9 free GiB of RAM
+with Perl 5.26.1 and Mail::IMAPClient 3.42
+Transfer started at Thu Sep 19 08:38:13 2019
+PID is 20255 my PPID is 17740
+Log file is LOG_imapsync/2019_09_19_08_38_13_555_m.damaszka@estella.eu_m.damaszka@estella.eu.txt ( to change it, use --logfile path ; or use --nolog to turn off logging )
+Load is 0.25 0.23 0.18 1/219 on 1 cores
+Current directory is /root/bash-imap-sync
+Real user id is root (uid 0)
+Effective user id is root (euid 0)
+$RCSfile: imapsync,v $ $Revision: 1.945 $ $Date: 2019/06/26 19:30:56 $ 
+Command line used, run by /usr/bin/perl:
+/usr/bin/imapsync --addheader --no-modulesversion --nosyncacls --nosslcheck --syncinternaldates --host1 stella.home.pl --user1 m.damaszka@estella.eu --password1 MASKED --host2 afrodyta.boost.pl --user2 m.damaszka@estella.eu --password2 MASKED --noauthmd5
+Temp directory is /tmp ( to change it use --tmpdir dirpath )
+kill -QUIT 20255 # special behavior: call to sub catch_exit
+kill -TERM 20255 # special behavior: call to sub catch_exit
+kill -INT 20255 # special behavior: call to sub catch_reconnect
+kill -HUP 20255 # special behavior: call to sub catch_print
+kill -USR1 20255 # special behavior: call to sub toggle_sleep
+File /tmp/imapsync.pid does not exist
+PID file is /tmp/imapsync.pid ( to change it, use --pidfile filepath ; to avoid it use --pidfile "" )
+Writing my PID 20255 in /tmp/imapsync.pid
+Writing also my logfile name in /tmp/imapsync.pid : LOG_imapsync/2019_09_19_08_38_13_555_m.damaszka@estella.eu_m.damaszka@estella.eu.txt
+Info: will resync flags for already transferred messages. Use --noresyncflags to not resync flags.
+Info: turned ON syncinternaldates, will set the internal dates (arrival dates) on host2 same as host1.
+Host1: will try to use LOGIN authentication on host1
+Host2: will try to use LOGIN authentication on host2
+Host1: imap connection timeout is 120 seconds
+Host2: imap connection timeout is 120 seconds
+Host1: IMAP server [stella.home.pl] port [143] user [m.damaszka@estella.eu]
+Host2: IMAP server [afrodyta.boost.pl] port [143] user [m.damaszka@estella.eu]
+Host1: connecting and login on host1 [stella.home.pl] port [143] with user [m.damaszka@estella.eu]
+Host1 IP address: 79.96.68.165
+Host1 banner: * OK stella.home.pl IdeaImapServer 0.83.292 ready
+Host1 capability before authentication: IMAP4rev1 LITERAL+ CHILDREN I18NLEVEL=1 IDLE SORT SORT=DISPLAY UIDPLUS UNSELECT QUOTA MOVE WITHIN LIST-EXTENDED LIST-STATUS SPECIAL-USE XLIST STARTTLS AUTH=PLAIN AUTH=LOGIN I18NLEVEL AUTH
+Host1: going to ssl because STARTTLS is in CAPABILITY. Use --notls1 or --notls2 to avoid that behavior
+Host1: Socket successfuly converted to SSL
+Host1: stella.home.pl says it has CAPABILITY for AUTHENTICATE LOGIN
+Host1: success login on [stella.home.pl] with user [m.damaszka@estella.eu] auth [LOGIN]
+Host2: connecting and login on host2 [afrodyta.boost.pl] port [143] with user [m.damaszka@estella.eu]
+Host2 IP address: 148.251.0.25
+Host2 banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ STARTTLS AUTH=PLAIN] Dovecot DA ready.
+Host2 capability before authentication: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ STARTTLS AUTH=PLAIN AUTH
+Host2: going to ssl because STARTTLS is in CAPABILITY. Use --notls1 or --notls2 to avoid that behavior
+Host2: Socket successfuly converted to SSL
+Host2: success login on [afrodyta.boost.pl] with user [m.damaszka@estella.eu] auth [LOGIN]
+Host1: state Authenticated
+Host2: state Authenticated
+Host1 capability once authenticated: IMAP4rev1 LITERAL+ CHILDREN I18NLEVEL=1 IDLE SORT SORT=DISPLAY UIDPLUS UNSELECT QUOTA MOVE WITHIN LIST-EXTENDED LIST-STATUS SPECIAL-USE XLIST I18NLEVEL
+Host2 capability once authenticated: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT SORT=DISPLAY THREAD=REFERENCES THREAD=REFS THREAD=ORDEREDSUBJECT MULTIAPPEND URL-PARTIAL CATENATE UNSELECT CHILDREN NAMESPACE UIDPLUS LIST-EXTENDED I18NLEVEL=1 CONDSTORE QRESYNC ESEARCH ESORT SEARCHRES WITHIN CONTEXT=SEARCH LIST-STATUS BINARY MOVE SNIPPET=FUZZY PREVIEW=FUZZY LITERAL+ NOTIFY QUOTA THREAD I18NLEVEL CONTEXT SNIPPET PREVIEW
+Host1: No ID capability
+
+Host2: found ID capability. Sending/receiving ID, presented in raw IMAP for now.
+In order to avoid sending/receiving ID, use option --noid
+Sending: 6 ID ("name" "imapsync" "version" "1.945" "os" "linux" "vendor" "Gilles LAMIRAL" "support-url" "https://imapsync.lamiral.info/" "date" "26-Jun-2019 19:30:56 +0000" "side" "host2")
+Sent 181 bytes
+Read: 	* ID ("name" "Dovecot")
+  	6 OK ID completed (0.001 + 0.000 secs).
+
+
+Host2: found quota, presented in raw IMAP
+Sending: 7 GETQUOTAROOT INBOX
+Sent 22 bytes
+Read: 	7 OK No quota (0.033 + 0.000 + 0.032 secs).
+
+Host2: Quota current storage is 0 bytes. Limit is 0 bytes. So 0 % full
+Host1: found 7 folders.
+Host2: found 7 folders.
+Host1: guessing separator from folder listing: [/]
+Host1: No NAMESPACE capability, so using guessed separator [/]
+You can set the separator character with the --sep1 option,
+the complete listing of folders may help you to find it
+[DRAFTS]
+[INBOX]
+[SENT]
+[SPAM]
+[TRASH]
+[confirmed-ham]
+[confirmed-spam]
+Host2: guessing separator from folder listing: [/]
+Host2: separator given by NAMESPACE: [.]
+Host1: guessing prefix from folder listing: []
+Host1: No NAMESPACE capability so using guessed prefix []
+You can set the prefix namespace with the --prefix1 option,
+the folowing listing of folders may help you to find it:
+[DRAFTS]
+[INBOX]
+[SENT]
+[SPAM]
+[TRASH]
+[confirmed-ham]
+[confirmed-spam]
+Host2: guessing prefix from folder listing: []
+Host2: prefix given by NAMESPACE: []
+Host1: separator and prefix: [/][]
+Host2: separator and prefix: [.][]
+Including all folders found by default. Use --subscribed or --folder or --folderrec or --include to select specific folders. Use --exclude to unselect specific folders.
+Host1: Checking wanted folders exist. Use --nocheckfoldersexist to avoid this check (shared of public namespace targeted).
+Host1: Checking wanted folders are selectable. Use --nocheckselectable to avoid this check.
+Turned off automapping folders ( use --automap to turn on automapping )
+
+++++ Listing folders
+All foldernames are presented between brackets like [X] where X is the foldername.
+When a foldername contains non-ASCII characters it is presented in the form
+[X] = [Y] where
+X is the imap foldername you have to use in command line options and
+Y is the utf8 output just printed for convenience, to recognize it.
+
+Host1: folders list (first the raw imap format then the [X] = [Y]):
+* LIST (\HasNoChildren \Drafts) "." "DRAFTS"
+* LIST (\HasNoChildren) "." "INBOX"
+* LIST (\HasNoChildren \Sent) "." "SENT"
+* LIST (\HasNoChildren \Junk) "." "SPAM"
+* LIST (\HasNoChildren \Trash) "." "TRASH"
+* LIST (\HasNoChildren) "." "confirmed-ham"
+* LIST (\HasNoChildren) "." "confirmed-spam"
+17 OK Completed
+
+[DRAFTS]
+[INBOX]
+[SENT]
+[SPAM]
+[TRASH]
+[confirmed-ham]
+[confirmed-spam]
+
+Host2: folders list (first the raw imap format then the [X] = [Y]):
+* LIST (\HasNoChildren) "." confirmed-spam
+* LIST (\HasNoChildren) "." confirmed-ham
+* LIST (\HasNoChildren) "." TRASH
+* LIST (\HasNoChildren) "." SPAM
+* LIST (\HasNoChildren) "." SENT
+* LIST (\HasNoChildren) "." DRAFTS
+* LIST (\HasNoChildren) "." INBOX
+12 OK List completed (0.001 + 0.000 secs).
+
+[DRAFTS]
+[INBOX]
+[SENT]
+[SPAM]
+[TRASH]
+[confirmed-ham]
+[confirmed-spam]
+
+
+Folders sizes before the synchronization.
+You can remove foldersizes listings by using "--nofoldersizes" and "--nofoldersizesatend"
+but then you will also lose the ETA (Estimation Time of Arrival) given after each message copy.
+++++ Calculating sizes of 7 folders on Host1
+Host1 folder     1/7 [DRAFTS]                            Size:         0 Messages:     0 Biggest:         0
+Host1 folder     2/7 [INBOX]                             Size: 2315647666 Messages: 14139 Biggest: 110850915
+Host1 folder     3/7 [SENT]                              Size:         0 Messages:     0 Biggest:         0
+Host1 folder     4/7 [SPAM]                              Size:    944311 Messages:    72 Biggest:     52417
+Host1 folder     5/7 [TRASH]                             Size:         0 Messages:     0 Biggest:         0
+Host1 folder     6/7 [confirmed-ham]                     Size:         0 Messages:     0 Biggest:         0
+Host1 folder     7/7 [confirmed-spam]                    Size:         0 Messages:     0 Biggest:         0
+Host1 Nb folders:                7 folders
+Host1 Nb messages:           14211 messages
+Host1 Total size:       2316591977 bytes (2.157 GiB)
+Host1 Biggest message:   110850915 bytes (105.716 MiB)
+Host1 Time spent:              2.6 seconds
+++++ Calculating sizes of 7 folders on Host2
+Host2 folder     1/7 [DRAFTS]                            Size:         0 Messages:     0 Biggest:         0
+Host2 folder     2/7 [INBOX]                             Size: 2315354219 Messages: 14132 Biggest: 110850915
+Host2 folder     3/7 [SENT]                              Size:         0 Messages:     0 Biggest:         0
+Host2 folder     4/7 [SPAM]                              Size:   1114834 Messages:    86 Biggest:     52417
+Host2 folder     5/7 [TRASH]                             Size:         0 Messages:     0 Biggest:         0
+Host2 folder     6/7 [confirmed-ham]                     Size:         0 Messages:     0 Biggest:         0
+Host2 folder     7/7 [confirmed-spam]                    Size:         0 Messages:     0 Biggest:         0
+Host2 Nb folders:                7 folders
+Host2 Nb messages:           14218 messages
+Host2 Total size:       2316469053 bytes (2.157 GiB)
+Host2 Biggest message:   110850915 bytes (105.716 MiB)
+Host2 Time spent:              1.2 seconds
+++++ Looping on each one of 7 folders to sync
+Folder     1/7 [DRAFTS]                            -> [DRAFTS]                           
+Host1: folder [DRAFTS] has 0 messages in total (mentioned by SELECT)
+Host2: folder [DRAFTS] has 0 messages in total (mentioned by SELECT)
+Host2: folder [DRAFTS] permanentflags: 
+Host1: folder [DRAFTS] considering 0 messages
+Host2: folder [DRAFTS] considering 0 messages
+Host1: folder [DRAFTS] selected 0 messages, duplicates 0
+Host2: folder [DRAFTS] selected 0 messages, duplicates 0
+Folder     2/7 [INBOX]                             -> [INBOX]                            
+Host1: folder [INBOX] has 14139 messages in total (mentioned by SELECT)
+Host2: folder [INBOX] has 14132 messages in total (mentioned by SELECT)
+Host2: folder [INBOX] permanentflags: 
+Host1: folder [INBOX] considering 14139 messages
+Host2: folder [INBOX] considering 14132 messages
+Host1: folder [INBOX] selected 14139 messages, duplicates 0
+Host2: folder [INBOX] selected 14132 messages, duplicates 0
+msg INBOX/28 {1931157}        copied to INBOX/14133      0.00 msgs/s  3.233 KiB/s 1.842 MiB copied ETA: Tue Dec 24 01:37:24 2019  8272164 s  14183/14211 msgs left
+msg INBOX/34 {2286}           copied to INBOX/14134      0.00 msgs/s  3.236 KiB/s 1.844 MiB copied ETA: Wed Nov  6 04:36:59 2019  4135739 s  14177/14211 msgs left
+msg INBOX/51 {2808}           copied to INBOX/14135      0.01 msgs/s  3.240 KiB/s 1.847 MiB copied ETA: Mon Oct 21 05:57:26 2019  2754566 s  14160/14211 msgs left
+msg INBOX/56 {5158}           copied to INBOX/14136      0.01 msgs/s  3.248 KiB/s 1.851 MiB copied ETA: Sun Oct 13 06:36:41 2019  2065720 s  14155/14211 msgs left
+msg INBOX/61 {2139}           copied to INBOX/14137      0.01 msgs/s  3.251 KiB/s 1.854 MiB copied ETA: Tue Oct  8 11:48:14 2019  1652413 s  14150/14211 msgs left
+msg INBOX/78 {2369}           copied to INBOX/14138      0.01 msgs/s  3.254 KiB/s 1.856 MiB copied ETA: Sat Oct  5 06:57:02 2019  1375742 s  14133/14211 msgs left
+msg INBOX/101 {1660497}       copied to INBOX/14139      0.01 msgs/s  6.025 KiB/s 3.439 MiB copied ETA: Thu Oct  3 00:05:28 2019  1178247 s  14110/14211 msgs left
+msg INBOX/110 {3176}          copied to INBOX/14140      0.01 msgs/s  6.029 KiB/s 3.442 MiB copied ETA: Tue Oct  1 07:04:16 2019  1030574 s  14101/14211 msgs left
+msg INBOX/417 {1719397}       copied to INBOX/14141      0.02 msgs/s  8.894 KiB/s 5.082 MiB copied ETA: Sun Sep 29 17:55:08 2019  896826 s  13794/14211 msgs left
+msg INBOX/480 {2227}          copied to INBOX/14142      0.02 msgs/s  8.895 KiB/s 5.084 MiB copied ETA: Sat Sep 28 16:02:26 2019  803664 s  13731/14211 msgs left
+msg INBOX/483 {2289}          copied to INBOX/14143      0.02 msgs/s  8.894 KiB/s 5.086 MiB copied ETA: Fri Sep 27 19:49:03 2019  730861 s  13728/14211 msgs left
+msg INBOX/681 {1694478}       copied to INBOX/14144      0.02 msgs/s  11.709 KiB/s 6.702 MiB copied ETA: Fri Sep 27 00:22:27 2019  660864 s  13530/14211 msgs left
+msg INBOX/813 {33730}         copied to INBOX/14145      0.02 msgs/s  11.762 KiB/s 6.735 MiB copied ETA: Thu Sep 26 08:39:04 2019  604261 s  13398/14211 msgs left
+msg INBOX/814 {5976}          copied to INBOX/14146      0.02 msgs/s  11.769 KiB/s 6.740 MiB copied ETA: Wed Sep 25 20:41:41 2019  561218 s  13397/14211 msgs left
+msg INBOX/815 {5894}          copied to INBOX/14147      0.03 msgs/s  11.775 KiB/s 6.746 MiB copied ETA: Wed Sep 25 10:19:39 2019  523896 s  13396/14211 msgs left
+msg INBOX/816 {466100}        copied to INBOX/14148      0.03 msgs/s  12.546 KiB/s 7.190 MiB copied ETA: Wed Sep 25 01:16:56 2019  491332 s  13395/14211 msgs left
+msg INBOX/884 {1694261}       copied to INBOX/14149      0.03 msgs/s  15.353 KiB/s 8.806 MiB copied ETA: Tue Sep 24 16:42:11 2019  460447 s  13327/14211 msgs left
+msg INBOX/886 {57264}         copied to INBOX/14150      0.03 msgs/s  15.444 KiB/s 8.861 MiB copied ETA: Tue Sep 24 09:36:48 2019  434924 s  13325/14211 msgs left
+msg INBOX/900 {11766}         copied to INBOX/14151      0.03 msgs/s  15.459 KiB/s 8.872 MiB copied ETA: Tue Sep 24 03:09:56 2019  411711 s  13311/14211 msgs left
+msg INBOX/1018 {567049}       copied to INBOX/14152      0.03 msgs/s  16.391 KiB/s 9.413 MiB copied ETA: Mon Sep 23 20:33:08 2019  387903 s  13193/14211 msgs left
+msg INBOX/1030 {2442}         copied to INBOX/14153      0.04 msgs/s  16.391 KiB/s 9.415 MiB copied ETA: Mon Sep 23 15:21:18 2019  369193 s  13181/14211 msgs left
+msg INBOX/1180 {15188}        copied to INBOX/14154      0.04 msgs/s  16.412 KiB/s 9.430 MiB copied ETA: Mon Sep 23 09:36:20 2019  348495 s  13031/14211 msgs left
+msg INBOX/1189 {87524}        copied to INBOX/14155      0.04 msgs/s  16.553 KiB/s 9.513 MiB copied ETA: Mon Sep 23 05:21:24 2019  333198 s  13022/14211 msgs left
+msg INBOX/1209 {97537}        copied to INBOX/14156      0.04 msgs/s  16.710 KiB/s 9.606 MiB copied ETA: Mon Sep 23 01:23:24 2019  318919 s  13002/14211 msgs left
+msg INBOX/1216 {244511}       copied to INBOX/14157      0.04 msgs/s  17.109 KiB/s 9.839 MiB copied ETA: Sun Sep 22 21:49:59 2019  306114 s  12995/14211 msgs left
+msg INBOX/1217 {323992}       copied to INBOX/14158      0.04 msgs/s  17.640 KiB/s 10.148 MiB copied ETA: Sun Sep 22 18:35:04 2019  294418 s  12994/14211 msgs left
+msg INBOX/1218 {401834}       copied to INBOX/14159      0.05 msgs/s  18.298 KiB/s 10.531 MiB copied ETA: Sun Sep 22 15:34:56 2019  283610 s  12993/14211 msgs left
+msg INBOX/1272 {414400}       copied to INBOX/14160      0.05 msgs/s  18.976 KiB/s 10.927 MiB copied ETA: Sun Sep 22 12:29:17 2019  272470 s  12939/14211 msgs left
+msg INBOX/1273 {164425}       copied to INBOX/14161      0.05 msgs/s  19.240 KiB/s 11.083 MiB copied ETA: Sun Sep 22 09:54:17 2019  263170 s  12938/14211 msgs left
+msg INBOX/1274 {176563}       copied to INBOX/14162      0.05 msgs/s  19.525 KiB/s 11.252 MiB copied ETA: Sun Sep 22 07:29:17 2019  254470 s  12937/14211 msgs left
+msg INBOX/1309 {45714}        copied to INBOX/14163      0.05 msgs/s  19.595 KiB/s 11.295 MiB copied ETA: Sun Sep 22 05:02:42 2019  245675 s  12902/14211 msgs left
+msg INBOX/1386 {17119}        copied to INBOX/14164      0.05 msgs/s  19.617 KiB/s 11.312 MiB copied ETA: Sun Sep 22 02:32:18 2019  236651 s  12825/14211 msgs left
+msg INBOX/1465 {3377728}      copied to INBOX/14165      0.06 msgs/s  25.148 KiB/s 14.533 MiB copied ETA: Sun Sep 22 00:17:37 2019  228569 s  12746/14211 msgs left
+msg INBOX/1498 {189244}       copied to INBOX/14166      0.06 msgs/s  25.449 KiB/s 14.714 MiB copied ETA: Sat Sep 21 22:17:36 2019  221367 s  12713/14211 msgs left
+msg INBOX/1607 {13038}        copied to INBOX/14167      0.06 msgs/s  25.465 KiB/s 14.726 MiB copied ETA: Sat Sep 21 20:02:16 2019  213247 s  12604/14211 msgs left
+msg INBOX/1620 {13824}        copied to INBOX/14168      0.06 msgs/s  25.482 KiB/s 14.739 MiB copied ETA: Sat Sep 21 18:20:41 2019  207152 s  12591/14211 msgs left
+msg INBOX/1631 {26620}        copied to INBOX/14169      0.06 msgs/s  25.519 KiB/s 14.765 MiB copied ETA: Sat Sep 21 16:45:23 2019  201434 s  12580/14211 msgs left
+msg INBOX/1711 {14220}        copied to INBOX/14170      0.06 msgs/s  25.536 KiB/s 14.778 MiB copied ETA: Sat Sep 21 14:57:09 2019  194939 s  12500/14211 msgs left
+msg INBOX/1742 {88051}        copied to INBOX/14171      0.07 msgs/s  25.671 KiB/s 14.862 MiB copied ETA: Sat Sep 21 13:27:12 2019  189542 s  12469/14211 msgs left
+msg INBOX/1756 {12422}        copied to INBOX/14172      0.07 msgs/s  25.684 KiB/s 14.874 MiB copied ETA: Sat Sep 21 12:05:41 2019  184651 s  12455/14211 msgs left
+msg INBOX/1757 {76129}        copied to INBOX/14173      0.07 msgs/s  25.801 KiB/s 14.947 MiB copied ETA: Sat Sep 21 10:51:20 2019  180190 s  12454/14211 msgs left
+msg INBOX/1758 {1728503}      copied to INBOX/14174      0.07 msgs/s  28.601 KiB/s 16.595 MiB copied ETA: Sat Sep 21 09:44:13 2019  176162 s  12453/14211 msgs left
+msg INBOX/1767 {14008}        copied to INBOX/14175      0.07 msgs/s  28.617 KiB/s 16.608 MiB copied ETA: Sat Sep 21 08:34:37 2019  171986 s  12444/14211 msgs left
+msg INBOX/1825 {1857}         copied to INBOX/14176      0.07 msgs/s  28.613 KiB/s 16.610 MiB copied ETA: Sat Sep 21 07:17:09 2019  167338 s  12386/14211 msgs left
+msg INBOX/1879 {2067}         copied to INBOX/14177      0.08 msgs/s  28.608 KiB/s 16.612 MiB copied ETA: Sat Sep 21 06:04:01 2019  162949 s  12332/14211 msgs left
+msg INBOX/1880 {2184}         copied to INBOX/14178      0.08 msgs/s  28.604 KiB/s 16.614 MiB copied ETA: Sat Sep 21 05:05:28 2019  159437 s  12331/14211 msgs left
+msg INBOX/1976 {12994}        copied to INBOX/14179      0.08 msgs/s  28.618 KiB/s 16.627 MiB copied ETA: Sat Sep 21 03:49:23 2019  154871 s  12235/14211 msgs left
+msg INBOX/2009 {2019}         copied to INBOX/14180      0.08 msgs/s  28.615 KiB/s 16.628 MiB copied ETA: Sat Sep 21 02:49:22 2019  151270 s  12202/14211 msgs left
+msg INBOX/2013 {26984}        copied to INBOX/14181      0.08 msgs/s  28.650 KiB/s 16.654 MiB copied ETA: Sat Sep 21 01:57:52 2019  148180 s  12198/14211 msgs left
+msg INBOX/2056 {1541443}      copied to INBOX/14182      0.08 msgs/s  31.115 KiB/s 18.124 MiB copied ETA: Sat Sep 21 01:04:55 2019  145002 s  12155/14211 msgs left
+msg INBOX/2103 {4107}         copied to INBOX/14183      0.09 msgs/s  31.115 KiB/s 18.128 MiB copied ETA: Sat Sep 21 00:08:52 2019  141638 s  12108/14211 msgs left
+msg INBOX/2110 {21269}        copied to INBOX/14184      0.09 msgs/s  31.142 KiB/s 18.148 MiB copied ETA: Fri Sep 20 23:22:45 2019  138871 s  12101/14211 msgs left
+msg INBOX/2111 {33861}        copied to INBOX/14185      0.09 msgs/s  31.175 KiB/s 18.181 MiB copied ETA: Fri Sep 20 22:40:33 2019  136339 s  12100/14211 msgs left
+msg INBOX/2121 {46853}        copied to INBOX/14186      0.09 msgs/s  31.239 KiB/s 18.225 MiB copied ETA: Fri Sep 20 21:57:30 2019  133756 s  12090/14211 msgs left
+msg INBOX/2122 {12883}        copied to INBOX/14187      0.09 msgs/s  31.253 KiB/s 18.238 MiB copied ETA: Fri Sep 20 21:17:15 2019  131341 s  12089/14211 msgs left
+msg INBOX/2179 {127288}       copied to INBOX/14188      0.09 msgs/s  31.448 KiB/s 18.359 MiB copied ETA: Fri Sep 20 20:28:59 2019  128444 s  12032/14211 msgs left
+msg INBOX/2282 {12918}        copied to INBOX/14189      0.10 msgs/s  31.460 KiB/s 18.371 MiB copied ETA: Fri Sep 20 19:34:00 2019  125145 s  11929/14211 msgs left
+msg INBOX/2319 {2189}         copied to INBOX/14190      0.10 msgs/s  31.452 KiB/s 18.373 MiB copied ETA: Fri Sep 20 18:52:24 2019  122649 s  11892/14211 msgs left
+msg INBOX/2337 {125557}       copied to INBOX/14191      0.10 msgs/s  31.640 KiB/s 18.493 MiB copied ETA: Fri Sep 20 18:15:48 2019  120453 s  11874/14211 msgs left
+msg INBOX/2368 {123849}       copied to INBOX/14192      0.10 msgs/s  31.826 KiB/s 18.611 MiB copied ETA: Fri Sep 20 17:38:11 2019  118196 s  11843/14211 msgs left
+msg INBOX/2379 {123980}       copied to INBOX/14193      0.10 msgs/s  32.015 KiB/s 18.730 MiB copied ETA: Fri Sep 20 17:04:55 2019  116199 s  11832/14211 msgs left
+msg INBOX/2399 {124111}       copied to INBOX/14194      0.10 msgs/s  32.203 KiB/s 18.848 MiB copied ETA: Fri Sep 20 16:31:17 2019  114181 s  11812/14211 msgs left
+msg INBOX/2400 {246699}       copied to INBOX/14195      0.11 msgs/s  32.587 KiB/s 19.083 MiB copied ETA: Fri Sep 20 16:01:58 2019  112421 s  11811/14211 msgs left
+msg INBOX/2413 {13696}        copied to INBOX/14196      0.11 msgs/s  32.601 KiB/s 19.096 MiB copied ETA: Fri Sep 20 15:31:09 2019  110572 s  11798/14211 msgs left
+msg INBOX/2422 {15329}        copied to INBOX/14197      0.11 msgs/s  32.617 KiB/s 19.111 MiB copied ETA: Fri Sep 20 15:01:54 2019  108817 s  11789/14211 msgs left
+msg INBOX/2434 {106467}       copied to INBOX/14198      0.11 msgs/s  32.777 KiB/s 19.212 MiB copied ETA: Fri Sep 20 14:33:20 2019  107103 s  11777/14211 msgs left
+msg INBOX/2515 {53453}        copied to INBOX/14199      0.11 msgs/s  32.854 KiB/s 19.263 MiB copied ETA: Fri Sep 20 13:55:09 2019  104812 s  11696/14211 msgs left
+msg INBOX/2564 {12210}        copied to INBOX/14200      0.11 msgs/s  32.865 KiB/s 19.275 MiB copied ETA: Fri Sep 20 13:22:41 2019  102864 s  11647/14211 msgs left
+msg INBOX/2586 {114862}       copied to INBOX/14201      0.11 msgs/s  33.042 KiB/s 19.385 MiB copied ETA: Fri Sep 20 12:55:10 2019  101213 s  11625/14211 msgs left
+msg INBOX/2587 {114849}       copied to INBOX/14202      0.12 msgs/s  33.218 KiB/s 19.494 MiB copied ETA: Fri Sep 20 12:31:27 2019  99789 s  11624/14211 msgs left
+msg INBOX/2599 {14203}        copied to INBOX/14203      0.12 msgs/s  33.234 KiB/s 19.508 MiB copied ETA: Fri Sep 20 12:06:41 2019  98303 s  11612/14211 msgs left
+msg INBOX/2657 {64087}        copied to INBOX/14204      0.12 msgs/s  33.327 KiB/s 19.569 MiB copied ETA: Fri Sep 20 11:36:24 2019  96486 s  11554/14211 msgs left
+msg INBOX/2890 {1834252}      copied to INBOX/14205      0.12 msgs/s  36.242 KiB/s 21.318 MiB copied ETA: Fri Sep 20 10:45:09 2019  93410 s  11321/14211 msgs left
+msg INBOX/2905 {117620}       copied to INBOX/14206      0.12 msgs/s  36.419 KiB/s 21.430 MiB copied ETA: Fri Sep 20 10:22:40 2019  92061 s  11306/14211 msgs left
+msg INBOX/2907 {121997}       copied to INBOX/14207      0.12 msgs/s  36.605 KiB/s 21.547 MiB copied ETA: Fri Sep 20 10:02:27 2019  90847 s  11304/14211 msgs left
+msg INBOX/2944 {30849}        copied to INBOX/14208      0.13 msgs/s  36.644 KiB/s 21.576 MiB copied ETA: Fri Sep 20 09:38:03 2019  89384 s  11267/14211 msgs left
+msg INBOX/3024 {14250}        copied to INBOX/14209      0.13 msgs/s  36.657 KiB/s 21.590 MiB copied ETA: Fri Sep 20 09:08:42 2019  87622 s  11187/14211 msgs left
+msg INBOX/3076 {14287}        copied to INBOX/14210      0.13 msgs/s  36.670 KiB/s 21.603 MiB copied ETA: Fri Sep 20 08:43:39 2019  86119 s  11135/14211 msgs left
+msg INBOX/3083 {29848}        copied to INBOX/14211      0.13 msgs/s  36.708 KiB/s 21.632 MiB copied ETA: Fri Sep 20 08:25:00 2019  85000 s  11128/14211 msgs left
+msg INBOX/3123 {20937}        copied to INBOX/14212      0.13 msgs/s  36.732 KiB/s 21.652 MiB copied ETA: Fri Sep 20 08:02:38 2019  83658 s  11088/14211 msgs left
+msg INBOX/3147 {14147}        copied to INBOX/14213      0.13 msgs/s  36.745 KiB/s 21.665 MiB copied ETA: Fri Sep 20 07:42:49 2019  82468 s  11064/14211 msgs left
+msg INBOX/3187 {24871}        copied to INBOX/14214      0.14 msgs/s  36.775 KiB/s 21.689 MiB copied ETA: Fri Sep 20 07:21:31 2019  81190 s  11024/14211 msgs left
+msg INBOX/3239 {44221}        copied to INBOX/14215      0.14 msgs/s  36.835 KiB/s 21.731 MiB copied ETA: Fri Sep 20 06:59:20 2019  79859 s  10972/14211 msgs left
+msg INBOX/3253 {14125}        copied to INBOX/14216      0.14 msgs/s  36.848 KiB/s 21.744 MiB copied ETA: Fri Sep 20 06:42:10 2019  78829 s  10958/14211 msgs left
+msg INBOX/3293 {1627688}      copied to INBOX/14217      0.14 msgs/s  39.428 KiB/s 23.297 MiB copied ETA: Fri Sep 20 06:23:38 2019  77716 s  10918/14211 msgs left
+msg INBOX/3327 {17437}        copied to INBOX/14218      0.14 msgs/s  39.446 KiB/s 23.313 MiB copied ETA: Fri Sep 20 06:04:56 2019  76594 s  10884/14211 msgs left
+msg INBOX/3797 {1945}         copied to INBOX/14219      0.14 msgs/s  39.438 KiB/s 23.315 MiB copied ETA: Fri Sep 20 04:56:06 2019  72464 s  10414/14211 msgs left
+msg INBOX/3917 {13605}        copied to INBOX/14220      0.15 msgs/s  39.449 KiB/s 23.328 MiB copied ETA: Fri Sep 20 04:28:58 2019  70836 s  10294/14211 msgs left
+msg INBOX/3986 {22624}        copied to INBOX/14221      0.15 msgs/s  39.474 KiB/s 23.350 MiB copied ETA: Fri Sep 20 04:08:12 2019  69589 s  10225/14211 msgs left
+msg INBOX/4134 {13375}        copied to INBOX/14222      0.15 msgs/s  39.485 KiB/s 23.363 MiB copied ETA: Fri Sep 20 03:39:02 2019  67839 s  10077/14211 msgs left
+msg INBOX/4191 {13894}        copied to INBOX/14223      0.15 msgs/s  39.498 KiB/s 23.376 MiB copied ETA: Fri Sep 20 03:20:33 2019  66730 s  10020/14211 msgs left
+msg INBOX/4305 {14370}        copied to INBOX/14224      0.15 msgs/s  39.510 KiB/s 23.389 MiB copied ETA: Fri Sep 20 02:56:14 2019  65271 s  9906/14211 msgs left
+msg INBOX/4639 {16544}        copied to INBOX/14225      0.15 msgs/s  39.525 KiB/s 23.405 MiB copied ETA: Fri Sep 20 02:08:34 2019  62410 s  9572/14211 msgs left
+msg INBOX/4643 {382908}       copied to INBOX/14226      0.15 msgs/s  40.123 KiB/s 23.770 MiB copied ETA: Fri Sep 20 01:57:34 2019  61750 s  9568/14211 msgs left
+msg INBOX/4657 {51486}        copied to INBOX/14227      0.16 msgs/s  40.195 KiB/s 23.820 MiB copied ETA: Fri Sep 20 01:45:31 2019  61028 s  9554/14211 msgs left
+msg INBOX/4725 {390188}       copied to INBOX/14228      0.16 msgs/s  40.801 KiB/s 24.192 MiB copied ETA: Fri Sep 20 01:28:18 2019  59994 s  9486/14211 msgs left
+msg INBOX/4800 {1063676}      copied to INBOX/14229      0.16 msgs/s  42.468 KiB/s 25.206 MiB copied ETA: Fri Sep 20 01:11:11 2019  58966 s  9411/14211 msgs left
+msg INBOX/4873 {13471}        copied to INBOX/14230      0.16 msgs/s  42.479 KiB/s 25.219 MiB copied ETA: Fri Sep 20 00:53:51 2019  57926 s  9338/14211 msgs left
+msg INBOX/4931 {4575}         copied to INBOX/14231      0.16 msgs/s  42.476 KiB/s 25.223 MiB copied ETA: Fri Sep 20 00:38:24 2019  56999 s  9280/14211 msgs left
+msg INBOX/4984 {4623}         copied to INBOX/14232      0.16 msgs/s  42.473 KiB/s 25.228 MiB copied ETA: Fri Sep 20 00:23:46 2019  56121 s  9227/14211 msgs left
+msg INBOX/4988 {21286}        copied to INBOX/14233      0.17 msgs/s  42.496 KiB/s 25.248 MiB copied ETA: Fri Sep 20 00:14:21 2019  55556 s  9223/14211 msgs left
+msg INBOX/4996 {48017}        copied to INBOX/14234      0.17 msgs/s  42.558 KiB/s 25.294 MiB copied ETA: Fri Sep 20 00:04:48 2019  54983 s  9215/14211 msgs left
+msg INBOX/4997 {43167}        copied to INBOX/14235      0.17 msgs/s  42.615 KiB/s 25.335 MiB copied ETA: Thu Sep 19 23:56:05 2019  54459 s  9214/14211 msgs left
+msg INBOX/5057 {76828}        copied to INBOX/14236      0.17 msgs/s  42.725 KiB/s 25.408 MiB copied ETA: Thu Sep 19 23:41:47 2019  53601 s  9154/14211 msgs left
+msg INBOX/5102 {73942}        copied to INBOX/14237      0.17 msgs/s  42.831 KiB/s 25.479 MiB copied ETA: Thu Sep 19 23:29:11 2019  52845 s  9109/14211 msgs left
+msg INBOX/5103 {87557}        copied to INBOX/14238      0.17 msgs/s  42.956 KiB/s 25.562 MiB copied ETA: Thu Sep 19 23:21:05 2019  52359 s  9108/14211 msgs left
+msg INBOX/5135 {101073}       copied to INBOX/14239      0.18 msgs/s  43.104 KiB/s 25.659 MiB copied ETA: Thu Sep 19 23:10:11 2019  51705 s  9076/14211 msgs left
+msg INBOX/5153 {18105}        copied to INBOX/14240      0.18 msgs/s  43.121 KiB/s 25.676 MiB copied ETA: Thu Sep 19 23:00:45 2019  51138 s  9058/14211 msgs left
+msg INBOX/5194 {14289}        copied to INBOX/14241      0.18 msgs/s  43.132 KiB/s 25.690 MiB copied ETA: Thu Sep 19 22:49:20 2019  50454 s  9017/14211 msgs left
+msg INBOX/5285 {566526}       copied to INBOX/14242      0.18 msgs/s  44.012 KiB/s 26.230 MiB copied ETA: Thu Sep 19 22:33:48 2019  49521 s  8926/14211 msgs left
+msg INBOX/5504 {5761}         copied to INBOX/14243      0.18 msgs/s  44.010 KiB/s 26.235 MiB copied ETA: Thu Sep 19 22:06:30 2019  47883 s  8707/14211 msgs left
+msg INBOX/5640 {18931}        copied to INBOX/14244      0.18 msgs/s  44.029 KiB/s 26.253 MiB copied ETA: Thu Sep 19 21:47:14 2019  46727 s  8571/14211 msgs left
+msg INBOX/5678 {8119}         copied to INBOX/14245      0.19 msgs/s  44.029 KiB/s 26.261 MiB copied ETA: Thu Sep 19 21:37:08 2019  46120 s  8533/14211 msgs left
+msg INBOX/5781 {6009}         copied to INBOX/14246      0.19 msgs/s  44.028 KiB/s 26.267 MiB copied ETA: Thu Sep 19 21:21:23 2019  45175 s  8430/14211 msgs left
+msg INBOX/5825 {21003}        copied to INBOX/14247      0.19 msgs/s  44.049 KiB/s 26.287 MiB copied ETA: Thu Sep 19 21:11:09 2019  44561 s  8386/14211 msgs left
+msg INBOX/5926 {6338}         copied to INBOX/14248      0.19 msgs/s  44.048 KiB/s 26.293 MiB copied ETA: Thu Sep 19 20:56:04 2019  43656 s  8285/14211 msgs left
+msg INBOX/5972 {11531}        copied to INBOX/14249      0.19 msgs/s  44.055 KiB/s 26.304 MiB copied ETA: Thu Sep 19 20:46:03 2019  43054 s  8239/14211 msgs left
+msg INBOX/6032 {14302}        copied to INBOX/14250      0.19 msgs/s  44.066 KiB/s 26.318 MiB copied ETA: Thu Sep 19 20:34:58 2019  42390 s  8179/14211 msgs left
+msg INBOX/6145 {4497}         copied to INBOX/14251      0.19 msgs/s  44.063 KiB/s 26.322 MiB copied ETA: Thu Sep 19 20:19:31 2019  41463 s  8066/14211 msgs left
+msg INBOX/6207 {13948}        copied to INBOX/14252      0.20 msgs/s  44.073 KiB/s 26.335 MiB copied ETA: Thu Sep 19 20:08:41 2019  40812 s  8004/14211 msgs left
+msg INBOX/6251 {15911}        copied to INBOX/14253      0.20 msgs/s  44.087 KiB/s 26.350 MiB copied ETA: Thu Sep 19 19:59:31 2019  40263 s  7960/14211 msgs left
+msg INBOX/6252 {17719}        copied to INBOX/14254      0.20 msgs/s  44.103 KiB/s 26.367 MiB copied ETA: Thu Sep 19 19:54:07 2019  39938 s  7959/14211 msgs left
+msg INBOX/6271 {7511204}      copied to INBOX/14255      0.20 msgs/s  55.858 KiB/s 33.530 MiB copied ETA: Thu Sep 19 19:49:51 2019  39680 s  7940/14211 msgs left
+msg INBOX/6334 {14595}        copied to INBOX/14256      0.20 msgs/s  55.867 KiB/s 33.544 MiB copied ETA: Thu Sep 19 19:39:29 2019  39057 s  7877/14211 msgs left
+msg INBOX/6398 {25813}        copied to INBOX/14257      0.20 msgs/s  55.889 KiB/s 33.569 MiB copied ETA: Thu Sep 19 19:29:15 2019  38443 s  7813/14211 msgs left
+msg INBOX/6399 {26398}        copied to INBOX/14258      0.20 msgs/s  55.916 KiB/s 33.594 MiB copied ETA: Thu Sep 19 19:24:15 2019  38143 s  7812/14211 msgs left
+msg INBOX/6434 {5090495}      copied to INBOX/14259      0.21 msgs/s  63.704 KiB/s 38.449 MiB copied ETA: Thu Sep 19 19:19:21 2019  37846 s  7777/14211 msgs left
+msg INBOX/6449 {5110938}      copied to INBOX/14260      0.21 msgs/s  71.521 KiB/s 43.323 MiB copied ETA: Thu Sep 19 19:15:31 2019  37614 s  7762/14211 msgs left
+msg INBOX/6529 {22398}        copied to INBOX/14261      0.21 msgs/s  71.528 KiB/s 43.344 MiB copied ETA: Thu Sep 19 19:04:30 2019  36952 s  7682/14211 msgs left
+msg INBOX/6599 {20469}        copied to INBOX/14262      0.21 msgs/s  71.541 KiB/s 43.364 MiB copied ETA: Thu Sep 19 18:54:21 2019  36344 s  7612/14211 msgs left
+msg INBOX/6604 {43565}        copied to INBOX/14263      0.21 msgs/s  71.586 KiB/s 43.405 MiB copied ETA: Thu Sep 19 18:49:32 2019  36054 s  7607/14211 msgs left
+msg INBOX/6680 {21873}        copied to INBOX/14264      0.21 msgs/s  71.600 KiB/s 43.426 MiB copied ETA: Thu Sep 19 18:39:12 2019  35434 s  7531/14211 msgs left
+msg INBOX/6781 {17733}        copied to INBOX/14265      0.21 msgs/s  71.606 KiB/s 43.443 MiB copied ETA: Thu Sep 19 18:27:05 2019  34706 s  7430/14211 msgs left
+msg INBOX/6804 {31533}        copied to INBOX/14266      0.22 msgs/s  71.636 KiB/s 43.473 MiB copied ETA: Thu Sep 19 18:21:08 2019  34350 s  7407/14211 msgs left
+msg INBOX/6837 {13942832}     copied to INBOX/14267      0.22 msgs/s  92.733 KiB/s 56.770 MiB copied ETA: Thu Sep 19 18:19:26 2019  34242 s  7374/14211 msgs left
+msg INBOX/6844 {17140}        copied to INBOX/14268      0.22 msgs/s  92.736 KiB/s 56.787 MiB copied ETA: Thu Sep 19 18:14:50 2019  33966 s  7367/14211 msgs left
+msg INBOX/6886 {81006}        copied to INBOX/14269      0.22 msgs/s  92.830 KiB/s 56.864 MiB copied ETA: Thu Sep 19 18:07:42 2019  33538 s  7325/14211 msgs left
+msg INBOX/6934 {40218}        copied to INBOX/14270      0.22 msgs/s  92.864 KiB/s 56.902 MiB copied ETA: Thu Sep 19 18:00:11 2019  33087 s  7277/14211 msgs left
+msg INBOX/7090 {390684}       copied to INBOX/14271      0.22 msgs/s  93.395 KiB/s 57.275 MiB copied ETA: Thu Sep 19 17:44:56 2019  32171 s  7121/14211 msgs left
+msg INBOX/7092 {28743}        copied to INBOX/14272      0.22 msgs/s  93.414 KiB/s 57.302 MiB copied ETA: Thu Sep 19 17:41:06 2019  31941 s  7119/14211 msgs left
+msg INBOX/7112 {26642}        copied to INBOX/14273      0.22 msgs/s  93.431 KiB/s 57.328 MiB copied ETA: Thu Sep 19 17:35:59 2019  31634 s  7099/14211 msgs left
+msg INBOX/7125 {25169}        copied to INBOX/14274      0.23 msgs/s  93.446 KiB/s 57.352 MiB copied ETA: Thu Sep 19 17:31:27 2019  31362 s  7086/14211 msgs left
+msg INBOX/7131 {19062100}     copied to INBOX/14275      0.22 msgs/s  121.180 KiB/s 75.531 MiB copied ETA: Thu Sep 19 17:35:35 2019  31600 s  7080/14211 msgs left
+msg INBOX/7136 {22059}        copied to INBOX/14276      0.23 msgs/s  121.180 KiB/s 75.552 MiB copied ETA: Thu Sep 19 17:31:43 2019  31367 s  7075/14211 msgs left
+msg INBOX/7216 {22761}        copied to INBOX/14277      0.23 msgs/s  121.181 KiB/s 75.573 MiB copied ETA: Thu Sep 19 17:22:23 2019  30807 s  6995/14211 msgs left
+msg INBOX/7236 {4195}         copied to INBOX/14278      0.23 msgs/s  121.162 KiB/s 75.577 MiB copied ETA: Thu Sep 19 17:17:31 2019  30515 s  6975/14211 msgs left
+msg INBOX/7255 {90461}        copied to INBOX/14279      0.23 msgs/s  121.237 KiB/s 75.664 MiB copied ETA: Thu Sep 19 17:12:57 2019  30241 s  6956/14211 msgs left
+msg INBOX/7360 {20383933}     copied to INBOX/14280      0.23 msgs/s  150.527 KiB/s 95.103 MiB copied ETA: Thu Sep 19 17:08:12 2019  29948 s  6851/14211 msgs left
+msg INBOX/7361 {22754}        copied to INBOX/14281      0.23 msgs/s  150.515 KiB/s 95.125 MiB copied ETA: Thu Sep 19 17:04:56 2019  29752 s  6850/14211 msgs left
+msg INBOX/7366 {68813}        copied to INBOX/14282      0.23 msgs/s  150.577 KiB/s 95.191 MiB copied ETA: Thu Sep 19 17:01:25 2019  29540 s  6845/14211 msgs left
+msg INBOX/7378 {14374}        copied to INBOX/14283      0.23 msgs/s  150.568 KiB/s 95.204 MiB copied ETA: Thu Sep 19 16:57:24 2019  29299 s  6833/14211 msgs left
+msg INBOX/7475 {9699453}      copied to INBOX/14284      0.23 msgs/s  164.264 KiB/s 104.454 MiB copied ETA: Thu Sep 19 16:50:04 2019  28856 s  6736/14211 msgs left
+msg INBOX/7521 {22430}        copied to INBOX/14285      0.23 msgs/s  164.250 KiB/s 104.476 MiB copied ETA: Thu Sep 19 16:43:48 2019  28480 s  6690/14211 msgs left
+msg INBOX/7523 {26283}        copied to INBOX/14286      0.24 msgs/s  164.248 KiB/s 104.501 MiB copied ETA: Thu Sep 19 16:40:42 2019  28294 s  6688/14211 msgs left
+msg INBOX/7551 {21952}        copied to INBOX/14287      0.24 msgs/s  164.239 KiB/s 104.522 MiB copied ETA: Thu Sep 19 16:35:50 2019  28001 s  6660/14211 msgs left
+msg INBOX/7604 {13919}        copied to INBOX/14288      0.24 msgs/s  164.223 KiB/s 104.535 MiB copied ETA: Thu Sep 19 16:29:15 2019  27606 s  6607/14211 msgs left
+msg INBOX/7651 {16776}        copied to INBOX/14289      0.24 msgs/s  164.211 KiB/s 104.551 MiB copied ETA: Thu Sep 19 16:23:10 2019  27242 s  6560/14211 msgs left
+msg INBOX/7658 {35380}        copied to INBOX/14290      0.24 msgs/s  164.229 KiB/s 104.585 MiB copied ETA: Thu Sep 19 16:19:55 2019  27046 s  6553/14211 msgs left
+msg INBOX/7659 {2883}         copied to INBOX/14291      0.24 msgs/s  164.201 KiB/s 104.588 MiB copied ETA: Thu Sep 19 16:17:06 2019  26877 s  6552/14211 msgs left
+msg INBOX/7662 {22331}        copied to INBOX/14292      0.25 msgs/s  164.192 KiB/s 104.609 MiB copied ETA: Thu Sep 19 16:14:13 2019  26704 s  6549/14211 msgs left
+msg INBOX/7694 {26743}        copied to INBOX/14293      0.25 msgs/s  164.191 KiB/s 104.634 MiB copied ETA: Thu Sep 19 16:09:24 2019  26415 s  6517/14211 msgs left
+msg INBOX/7723 {16427}        copied to INBOX/14294      0.25 msgs/s  164.172 KiB/s 104.650 MiB copied ETA: Thu Sep 19 16:04:51 2019  26142 s  6488/14211 msgs left
+msg INBOX/7773 {1052450}      copied to INBOX/14295      0.25 msgs/s  165.611 KiB/s 105.654 MiB copied ETA: Thu Sep 19 15:59:12 2019  25802 s  6438/14211 msgs left
+msg INBOX/7776 {76479}        copied to INBOX/14296      0.25 msgs/s  165.672 KiB/s 105.727 MiB copied ETA: Thu Sep 19 15:56:32 2019  25641 s  6435/14211 msgs left
+msg INBOX/7777 {15148}        copied to INBOX/14297      0.25 msgs/s  165.652 KiB/s 105.741 MiB copied ETA: Thu Sep 19 15:53:59 2019  25488 s  6434/14211 msgs left
+msg INBOX/7789 {16552}        copied to INBOX/14298      0.25 msgs/s  165.626 KiB/s 105.757 MiB copied ETA: Thu Sep 19 15:50:46 2019  25295 s  6422/14211 msgs left
+msg INBOX/7793 {47119}        copied to INBOX/14299      0.26 msgs/s  165.657 KiB/s 105.802 MiB copied ETA: Thu Sep 19 15:48:05 2019  25134 s  6418/14211 msgs left
+msg INBOX/7806 {881999}       copied to INBOX/14300      0.26 msgs/s  166.782 KiB/s 106.643 MiB copied ETA: Thu Sep 19 15:45:14 2019  24963 s  6405/14211 msgs left
+msg INBOX/7906 {15506}        copied to INBOX/14301      0.26 msgs/s  166.762 KiB/s 106.658 MiB copied ETA: Thu Sep 19 15:36:26 2019  24434 s  6305/14211 msgs left
+msg INBOX/7919 {53018}        copied to INBOX/14302      0.26 msgs/s  166.804 KiB/s 106.708 MiB copied ETA: Thu Sep 19 15:33:17 2019  24246 s  6292/14211 msgs left
+msg INBOX/7948 {152213}       copied to INBOX/14303      0.26 msgs/s  166.981 KiB/s 106.853 MiB copied ETA: Thu Sep 19 15:29:12 2019  24000 s  6263/14211 msgs left
+msg INBOX/8001 {13949}        copied to INBOX/14304      0.26 msgs/s  166.968 KiB/s 106.867 MiB copied ETA: Thu Sep 19 15:23:35 2019  23663 s  6210/14211 msgs left
+msg INBOX/8005 {21922}        copied to INBOX/14305      0.26 msgs/s  166.957 KiB/s 106.888 MiB copied ETA: Thu Sep 19 15:21:10 2019  23517 s  6206/14211 msgs left
+msg INBOX/8018 {13839}        copied to INBOX/14306      0.27 msgs/s  166.933 KiB/s 106.901 MiB copied ETA: Thu Sep 19 15:18:12 2019  23339 s  6193/14211 msgs left
+msg INBOX/8061 {21850}        copied to INBOX/14307      0.27 msgs/s  166.923 KiB/s 106.922 MiB copied ETA: Thu Sep 19 15:13:24 2019  23051 s  6150/14211 msgs left
+msg INBOX/8062 {21499}        copied to INBOX/14308      0.27 msgs/s  166.918 KiB/s 106.942 MiB copied ETA: Thu Sep 19 15:11:14 2019  22921 s  6149/14211 msgs left
+msg INBOX/8100 {22608}        copied to INBOX/14309      0.27 msgs/s  166.916 KiB/s 106.964 MiB copied ETA: Thu Sep 19 15:06:49 2019  22656 s  6111/14211 msgs left
+msg INBOX/8102 {38750}        copied to INBOX/14310      0.27 msgs/s  166.939 KiB/s 107.001 MiB copied ETA: Thu Sep 19 15:04:39 2019  22526 s  6109/14211 msgs left
+msg INBOX/8231 {17188}        copied to INBOX/14311      0.27 msgs/s  166.925 KiB/s 107.017 MiB copied ETA: Thu Sep 19 14:54:45 2019  21932 s  5980/14211 msgs left
+msg INBOX/8258 {7682}         copied to INBOX/14312      0.27 msgs/s  166.905 KiB/s 107.024 MiB copied ETA: Thu Sep 19 14:51:09 2019  21716 s  5953/14211 msgs left
+msg INBOX/8331 {22651}        copied to INBOX/14313      0.28 msgs/s  166.903 KiB/s 107.046 MiB copied ETA: Thu Sep 19 14:44:49 2019  21336 s  5880/14211 msgs left
+msg INBOX/8371 {22767}        copied to INBOX/14314      0.28 msgs/s  166.898 KiB/s 107.068 MiB copied ETA: Thu Sep 19 14:40:33 2019  21079 s  5840/14211 msgs left
+msg INBOX/8502 {178728}       copied to INBOX/14315      0.28 msgs/s  167.106 KiB/s 107.238 MiB copied ETA: Thu Sep 19 14:30:55 2019  20501 s  5709/14211 msgs left
+msg INBOX/8507 {48323}        copied to INBOX/14316      0.28 msgs/s  167.136 KiB/s 107.284 MiB copied ETA: Thu Sep 19 14:28:51 2019  20376 s  5704/14211 msgs left
+msg INBOX/8571 {3756}         copied to INBOX/14317      0.28 msgs/s  167.105 KiB/s 107.288 MiB copied ETA: Thu Sep 19 14:23:18 2019  20043 s  5640/14211 msgs left
+msg INBOX/8576 {7632}         copied to INBOX/14318      0.28 msgs/s  167.078 KiB/s 107.295 MiB copied ETA: Thu Sep 19 14:21:17 2019  19922 s  5635/14211 msgs left
+msg INBOX/8581 {14002}        copied to INBOX/14319      0.28 msgs/s  167.062 KiB/s 107.308 MiB copied ETA: Thu Sep 19 14:19:17 2019  19803 s  5630/14211 msgs left
+msg INBOX/8631 {36502}        copied to INBOX/14320      0.29 msgs/s  167.069 KiB/s 107.343 MiB copied ETA: Thu Sep 19 14:14:43 2019  19528 s  5580/14211 msgs left
+msg INBOX/8657 {8112}         copied to INBOX/14321      0.29 msgs/s  167.041 KiB/s 107.351 MiB copied ETA: Thu Sep 19 14:11:34 2019  19339 s  5554/14211 msgs left
+msg INBOX/8697 {33566}        copied to INBOX/14322      0.29 msgs/s  167.044 KiB/s 107.383 MiB copied ETA: Thu Sep 19 14:07:39 2019  19104 s  5514/14211 msgs left
+msg INBOX/8699 {39539}        copied to INBOX/14323      0.29 msgs/s  167.059 KiB/s 107.421 MiB copied ETA: Thu Sep 19 14:05:57 2019  19002 s  5512/14211 msgs left
+msg INBOX/8705 {255747}       copied to INBOX/14324      0.29 msgs/s  167.384 KiB/s 107.665 MiB copied ETA: Thu Sep 19 14:04:04 2019  18888 s  5506/14211 msgs left
+msg INBOX/8706 {191740}       copied to INBOX/14325      0.29 msgs/s  167.623 KiB/s 107.848 MiB copied ETA: Thu Sep 19 14:02:28 2019  18792 s  5505/14211 msgs left
+msg INBOX/8751 {1883}         copied to INBOX/14326      0.29 msgs/s  167.590 KiB/s 107.849 MiB copied ETA: Thu Sep 19 13:58:22 2019  18546 s  5460/14211 msgs left
+msg INBOX/8786 {913291}       copied to INBOX/14327      0.30 msgs/s  168.864 KiB/s 108.720 MiB copied ETA: Thu Sep 19 13:54:58 2019  18342 s  5425/14211 msgs left
+msg INBOX/8787 {171968}       copied to INBOX/14328      0.30 msgs/s  169.051 KiB/s 108.884 MiB copied ETA: Thu Sep 19 13:53:28 2019  18252 s  5424/14211 msgs left
+msg INBOX/8788 {148582}       copied to INBOX/14329      0.30 msgs/s  169.222 KiB/s 109.026 MiB copied ETA: Thu Sep 19 13:51:58 2019  18161 s  5423/14211 msgs left
+msg INBOX/8789 {934737}       copied to INBOX/14330      0.30 msgs/s  170.502 KiB/s 109.917 MiB copied ETA: Thu Sep 19 13:50:34 2019  18077 s  5422/14211 msgs left
+msg INBOX/8790 {30015}        copied to INBOX/14331      0.30 msgs/s  170.502 KiB/s 109.946 MiB copied ETA: Thu Sep 19 13:49:05 2019  17988 s  5421/14211 msgs left
+msg INBOX/8791 {222411}       copied to INBOX/14332      0.30 msgs/s  170.770 KiB/s 110.158 MiB copied ETA: Thu Sep 19 13:47:38 2019  17901 s  5420/14211 msgs left
+msg INBOX/8798 {217783}       copied to INBOX/14333      0.30 msgs/s  171.024 KiB/s 110.366 MiB copied ETA: Thu Sep 19 13:45:54 2019  17796 s  5413/14211 msgs left
+msg INBOX/8807 {2413190}      copied to INBOX/14334      0.31 msgs/s  174.449 KiB/s 112.667 MiB copied ETA: Thu Sep 19 13:44:11 2019  17693 s  5404/14211 msgs left
+msg INBOX/8839 {261949}       copied to INBOX/14335      0.31 msgs/s  174.761 KiB/s 112.917 MiB copied ETA: Thu Sep 19 13:41:07 2019  17509 s  5372/14211 msgs left
+msg INBOX/8889 {21557224}     copied to INBOX/14336      0.30 msgs/s  204.248 KiB/s 133.476 MiB copied ETA: Thu Sep 19 13:40:24 2019  17458 s  5322/14211 msgs left
+msg INBOX/8897 {46410}        copied to INBOX/14337      0.31 msgs/s  204.252 KiB/s 133.520 MiB copied ETA: Thu Sep 19 13:38:38 2019  17352 s  5314/14211 msgs left
+msg INBOX/8922 {50087}        copied to INBOX/14338      0.31 msgs/s  204.264 KiB/s 133.568 MiB copied ETA: Thu Sep 19 13:35:58 2019  17192 s  5289/14211 msgs left
+msg INBOX/8940 {3020}         copied to INBOX/14339      0.31 msgs/s  204.226 KiB/s 133.571 MiB copied ETA: Thu Sep 19 13:33:40 2019  17054 s  5271/14211 msgs left
+msg INBOX/8980 {138700}       copied to INBOX/14340      0.31 msgs/s  204.357 KiB/s 133.703 MiB copied ETA: Thu Sep 19 13:30:16 2019  16849 s  5231/14211 msgs left
+msg INBOX/8986 {228447}       copied to INBOX/14341      0.31 msgs/s  204.618 KiB/s 133.921 MiB copied ETA: Thu Sep 19 13:28:42 2019  16755 s  5225/14211 msgs left
+msg INBOX/9004 {30731}        copied to INBOX/14342      0.31 msgs/s  204.614 KiB/s 133.950 MiB copied ETA: Thu Sep 19 13:26:29 2019  16622 s  5207/14211 msgs left
+msg INBOX/9047 {14283}        copied to INBOX/14343      0.31 msgs/s  204.588 KiB/s 133.964 MiB copied ETA: Thu Sep 19 13:22:57 2019  16410 s  5164/14211 msgs left
+msg INBOX/9048 {16328}        copied to INBOX/14344      0.32 msgs/s  204.570 KiB/s 133.979 MiB copied ETA: Thu Sep 19 13:21:40 2019  16333 s  5163/14211 msgs left
+msg INBOX/9060 {211606}       copied to INBOX/14345      0.32 msgs/s  204.800 KiB/s 134.181 MiB copied ETA: Thu Sep 19 13:19:52 2019  16225 s  5151/14211 msgs left
+msg INBOX/9086 {164617}       copied to INBOX/14346      0.32 msgs/s  204.953 KiB/s 134.338 MiB copied ETA: Thu Sep 19 13:17:22 2019  16074 s  5125/14211 msgs left
+msg INBOX/9087 {197100}       copied to INBOX/14347      0.32 msgs/s  205.139 KiB/s 134.526 MiB copied ETA: Thu Sep 19 13:16:12 2019  16004 s  5124/14211 msgs left
+msg INBOX/9092 {1908611}      copied to INBOX/14348      0.32 msgs/s  207.537 KiB/s 136.346 MiB copied ETA: Thu Sep 19 13:15:13 2019  15943 s  5119/14211 msgs left
+msg INBOX/9104 {689605}       copied to INBOX/14349      0.32 msgs/s  208.390 KiB/s 137.004 MiB copied ETA: Thu Sep 19 13:13:34 2019  15844 s  5107/14211 msgs left
+msg INBOX/9112 {14082}        copied to INBOX/14350      0.32 msgs/s  208.364 KiB/s 137.017 MiB copied ETA: Thu Sep 19 13:12:00 2019  15750 s  5099/14211 msgs left
+msg INBOX/9114 {35169}        copied to INBOX/14351      0.33 msgs/s  208.355 KiB/s 137.051 MiB copied ETA: Thu Sep 19 13:10:47 2019  15676 s  5097/14211 msgs left
+msg INBOX/9140 {6034}         copied to INBOX/14352      0.33 msgs/s  208.317 KiB/s 137.057 MiB copied ETA: Thu Sep 19 13:08:20 2019  15529 s  5071/14211 msgs left
+msg INBOX/9141 {6043}         copied to INBOX/14353      0.33 msgs/s  208.277 KiB/s 137.062 MiB copied ETA: Thu Sep 19 13:07:10 2019  15459 s  5070/14211 msgs left
+msg INBOX/9151 {11486}        copied to INBOX/14354      0.33 msgs/s  208.247 KiB/s 137.073 MiB copied ETA: Thu Sep 19 13:05:34 2019  15363 s  5060/14211 msgs left
+msg INBOX/9177 {20614}        copied to INBOX/14355      0.33 msgs/s  208.231 KiB/s 137.093 MiB copied ETA: Thu Sep 19 13:03:10 2019  15219 s  5034/14211 msgs left
+msg INBOX/9201 {13923}        copied to INBOX/14356      0.33 msgs/s  208.202 KiB/s 137.106 MiB copied ETA: Thu Sep 19 13:00:53 2019  15082 s  5010/14211 msgs left
+msg INBOX/9204 {14925}        copied to INBOX/14357      0.33 msgs/s  208.169 KiB/s 137.120 MiB copied ETA: Thu Sep 19 12:59:41 2019  15010 s  5007/14211 msgs left
+msg INBOX/9205 {17892}        copied to INBOX/14358      0.33 msgs/s  208.139 KiB/s 137.137 MiB copied ETA: Thu Sep 19 12:58:36 2019  14945 s  5006/14211 msgs left
+msg INBOX/9206 {21286}        copied to INBOX/14359      0.34 msgs/s  208.118 KiB/s 137.158 MiB copied ETA: Thu Sep 19 12:57:31 2019  14880 s  5005/14211 msgs left
+msg INBOX/9212 {198539}       copied to INBOX/14360      0.34 msgs/s  208.327 KiB/s 137.347 MiB copied ETA: Thu Sep 19 12:56:14 2019  14802 s  4999/14211 msgs left
+msg INBOX/9323 {61776}        copied to INBOX/14361      0.34 msgs/s  208.358 KiB/s 137.406 MiB copied ETA: Thu Sep 19 12:49:46 2019  14414 s  4888/14211 msgs left
+msg INBOX/9370 {25898}        copied to INBOX/14362      0.34 msgs/s  208.340 KiB/s 137.431 MiB copied ETA: Thu Sep 19 12:46:30 2019  14217 s  4841/14211 msgs left
+msg INBOX/9377 {202232}       copied to INBOX/14363      0.34 msgs/s  208.534 KiB/s 137.624 MiB copied ETA: Thu Sep 19 12:45:15 2019  14142 s  4834/14211 msgs left
+msg INBOX/9385 {32261}        copied to INBOX/14364      0.34 msgs/s  208.522 KiB/s 137.654 MiB copied ETA: Thu Sep 19 12:43:55 2019  14062 s  4826/14211 msgs left
+msg INBOX/9389 {18921}        copied to INBOX/14365      0.34 msgs/s  208.491 KiB/s 137.672 MiB copied ETA: Thu Sep 19 12:42:47 2019  13994 s  4822/14211 msgs left
+msg INBOX/9397 {35453}        copied to INBOX/14366      0.35 msgs/s  208.484 KiB/s 137.706 MiB copied ETA: Thu Sep 19 12:41:28 2019  13915 s  4814/14211 msgs left
+msg INBOX/9422 {62669}        copied to INBOX/14367      0.35 msgs/s  208.514 KiB/s 137.766 MiB copied ETA: Thu Sep 19 12:39:21 2019  13787 s  4789/14211 msgs left
+msg INBOX/9447 {89422}        copied to INBOX/14368      0.35 msgs/s  208.585 KiB/s 137.851 MiB copied ETA: Thu Sep 19 12:37:15 2019  13661 s  4764/14211 msgs left
+msg INBOX/9448 {62270}        copied to INBOX/14369      0.35 msgs/s  208.623 KiB/s 137.911 MiB copied ETA: Thu Sep 19 12:36:18 2019  13604 s  4763/14211 msgs left
+msg INBOX/9459 {40420}        copied to INBOX/14370      0.35 msgs/s  208.627 KiB/s 137.949 MiB copied ETA: Thu Sep 19 12:34:53 2019  13519 s  4752/14211 msgs left
+msg INBOX/9524 {14132}        copied to INBOX/14371      0.35 msgs/s  208.598 KiB/s 137.963 MiB copied ETA: Thu Sep 19 12:30:56 2019  13282 s  4687/14211 msgs left
+msg INBOX/9545 {198369}       copied to INBOX/14372      0.35 msgs/s  208.791 KiB/s 138.152 MiB copied ETA: Thu Sep 19 12:29:07 2019  13173 s  4666/14211 msgs left
+msg INBOX/9564 {26273}        copied to INBOX/14373      0.36 msgs/s  208.767 KiB/s 138.177 MiB copied ETA: Thu Sep 19 12:27:23 2019  13069 s  4647/14211 msgs left
+msg INBOX/9565 {74061}        copied to INBOX/14374      0.36 msgs/s  208.794 KiB/s 138.248 MiB copied ETA: Thu Sep 19 12:26:32 2019  13017 s  4646/14211 msgs left
+msg INBOX/9631 {42033}        copied to INBOX/14375      0.36 msgs/s  208.799 KiB/s 138.288 MiB copied ETA: Thu Sep 19 12:22:38 2019  12782 s  4580/14211 msgs left
+msg INBOX/9636 {35869}        copied to INBOX/14376      0.36 msgs/s  208.798 KiB/s 138.322 MiB copied ETA: Thu Sep 19 12:21:35 2019  12719 s  4575/14211 msgs left
+msg INBOX/9735 {58573}        copied to INBOX/14377      0.36 msgs/s  208.823 KiB/s 138.378 MiB copied ETA: Thu Sep 19 12:16:12 2019  12397 s  4476/14211 msgs left
+msg INBOX/9740 {23532}        copied to INBOX/14378      0.36 msgs/s  208.734 KiB/s 138.400 MiB copied ETA: Thu Sep 19 12:15:16 2019  12340 s  4471/14211 msgs left
+msg INBOX/9780 {31803}        copied to INBOX/14379      0.36 msgs/s  208.698 KiB/s 138.430 MiB copied ETA: Thu Sep 19 12:12:41 2019  12185 s  4431/14211 msgs left
+msg INBOX/9786 {18361}        copied to INBOX/14380      0.37 msgs/s  208.665 KiB/s 138.448 MiB copied ETA: Thu Sep 19 12:11:39 2019  12123 s  4425/14211 msgs left
+msg INBOX/9866 {4129}         copied to INBOX/14381      0.37 msgs/s  208.622 KiB/s 138.452 MiB copied ETA: Thu Sep 19 12:07:15 2019  11858 s  4345/14211 msgs left
+msg INBOX/9912 {200122}       copied to INBOX/14382      0.37 msgs/s  208.804 KiB/s 138.643 MiB copied ETA: Thu Sep 19 12:04:29 2019  11692 s  4299/14211 msgs left
+msg INBOX/9928 {5827}         copied to INBOX/14383      0.37 msgs/s  208.767 KiB/s 138.648 MiB copied ETA: Thu Sep 19 12:03:01 2019  11605 s  4283/14211 msgs left
+msg INBOX/9958 {13795}        copied to INBOX/14384      0.37 msgs/s  208.735 KiB/s 138.661 MiB copied ETA: Thu Sep 19 12:00:57 2019  11480 s  4253/14211 msgs left
+msg INBOX/9997 {22701}        copied to INBOX/14385      0.37 msgs/s  208.722 KiB/s 138.683 MiB copied ETA: Thu Sep 19 11:58:30 2019  11333 s  4214/14211 msgs left
+msg INBOX/10029 {289686}      copied to INBOX/14386      0.37 msgs/s  209.059 KiB/s 138.959 MiB copied ETA: Thu Sep 19 11:56:24 2019  11206 s  4182/14211 msgs left
+msg INBOX/10072 {196271}      copied to INBOX/14387      0.37 msgs/s  209.271 KiB/s 139.147 MiB copied ETA: Thu Sep 19 11:53:49 2019  11051 s  4139/14211 msgs left
+msg INBOX/10073 {14440}       copied to INBOX/14388      0.38 msgs/s  209.247 KiB/s 139.160 MiB copied ETA: Thu Sep 19 11:53:06 2019  11008 s  4138/14211 msgs left
+msg INBOX/10085 {39231205}    copied to INBOX/14389      0.37 msgs/s  261.341 KiB/s 176.574 MiB copied ETA: Thu Sep 19 11:54:56 2019  11108 s  4126/14211 msgs left
+msg INBOX/10089 {26192}       copied to INBOX/14390      0.37 msgs/s  261.297 KiB/s 176.599 MiB copied ETA: Thu Sep 19 11:54:06 2019  11057 s  4122/14211 msgs left
+msg INBOX/10126 {194983}      copied to INBOX/14391      0.37 msgs/s  261.477 KiB/s 176.785 MiB copied ETA: Thu Sep 19 11:51:49 2019  10920 s  4085/14211 msgs left
+msg INBOX/10130 {130646}      copied to INBOX/14392      0.38 msgs/s  261.589 KiB/s 176.910 MiB copied ETA: Thu Sep 19 11:50:59 2019  10870 s  4081/14211 msgs left
+msg INBOX/10152 {13831}       copied to INBOX/14393      0.38 msgs/s  261.545 KiB/s 176.923 MiB copied ETA: Thu Sep 19 11:49:22 2019  10772 s  4059/14211 msgs left
+msg INBOX/10264 {195097}      copied to INBOX/14394      0.38 msgs/s  261.713 KiB/s 177.109 MiB copied ETA: Thu Sep 19 11:43:49 2019  10440 s  3947/14211 msgs left
+msg INBOX/10306 {78461}       copied to INBOX/14395      0.38 msgs/s  261.746 KiB/s 177.184 MiB copied ETA: Thu Sep 19 11:41:22 2019  10292 s  3905/14211 msgs left
+msg INBOX/10318 {194309}      copied to INBOX/14396      0.38 msgs/s  261.929 KiB/s 177.369 MiB copied ETA: Thu Sep 19 11:40:16 2019  10225 s  3893/14211 msgs left
+msg INBOX/10329 {13696}       copied to INBOX/14397      0.38 msgs/s  261.891 KiB/s 177.382 MiB copied ETA: Thu Sep 19 11:39:11 2019  10160 s  3882/14211 msgs left
+msg INBOX/10347 {81524}       copied to INBOX/14398      0.38 msgs/s  261.933 KiB/s 177.460 MiB copied ETA: Thu Sep 19 11:37:48 2019  10078 s  3864/14211 msgs left
+msg INBOX/10362 {17433}       copied to INBOX/14399      0.38 msgs/s  261.879 KiB/s 177.476 MiB copied ETA: Thu Sep 19 11:36:35 2019  10004 s  3849/14211 msgs left
+msg INBOX/10394 {91134}       copied to INBOX/14400      0.39 msgs/s  261.945 KiB/s 177.563 MiB copied ETA: Thu Sep 19 11:34:37 2019  9886 s  3817/14211 msgs left
+msg INBOX/10420 {195231}      copied to INBOX/14401      0.39 msgs/s  262.144 KiB/s 177.750 MiB copied ETA: Thu Sep 19 11:32:56 2019  9785 s  3791/14211 msgs left
+msg INBOX/10421 {21569}       copied to INBOX/14402      0.39 msgs/s  262.110 KiB/s 177.770 MiB copied ETA: Thu Sep 19 11:32:20 2019  9749 s  3790/14211 msgs left
+msg INBOX/10494 {30750}       copied to INBOX/14403      0.39 msgs/s  262.090 KiB/s 177.799 MiB copied ETA: Thu Sep 19 11:28:40 2019  9528 s  3717/14211 msgs left
+msg INBOX/10584 {2330}        copied to INBOX/14404      0.39 msgs/s  262.037 KiB/s 177.802 MiB copied ETA: Thu Sep 19 11:24:17 2019  9265 s  3627/14211 msgs left
+msg INBOX/10601 {43976}       copied to INBOX/14405      0.39 msgs/s  262.027 KiB/s 177.844 MiB copied ETA: Thu Sep 19 11:23:02 2019  9190 s  3610/14211 msgs left
+msg INBOX/10663 {41828}       copied to INBOX/14406      0.39 msgs/s  262.023 KiB/s 177.884 MiB copied ETA: Thu Sep 19 11:19:54 2019  9002 s  3548/14211 msgs left
+msg INBOX/10679 {1638}        copied to INBOX/14407      0.40 msgs/s  261.964 KiB/s 177.885 MiB copied ETA: Thu Sep 19 11:18:43 2019  8931 s  3532/14211 msgs left
+msg INBOX/10749 {9118865}     copied to INBOX/14408      0.40 msgs/s  273.614 KiB/s 186.581 MiB copied ETA: Thu Sep 19 11:15:54 2019  8759 s  3462/14211 msgs left
+msg INBOX/10764 {31511}       copied to INBOX/14409      0.40 msgs/s  273.585 KiB/s 186.612 MiB copied ETA: Thu Sep 19 11:14:47 2019  8692 s  3447/14211 msgs left
+msg INBOX/10765 {4243}        copied to INBOX/14410      0.40 msgs/s  273.522 KiB/s 186.616 MiB copied ETA: Thu Sep 19 11:14:16 2019  8660 s  3446/14211 msgs left
+msg INBOX/10804 {201873}      copied to INBOX/14411      0.40 msgs/s  273.707 KiB/s 186.808 MiB copied ETA: Thu Sep 19 11:12:10 2019  8534 s  3407/14211 msgs left
+msg INBOX/10823 {31509}       copied to INBOX/14412      0.40 msgs/s  273.679 KiB/s 186.838 MiB copied ETA: Thu Sep 19 11:10:55 2019  8459 s  3388/14211 msgs left
+msg INBOX/10828 {1837}        copied to INBOX/14413      0.40 msgs/s  273.622 KiB/s 186.840 MiB copied ETA: Thu Sep 19 11:10:14 2019  8418 s  3383/14211 msgs left
+msg INBOX/10843 {25298}       copied to INBOX/14414      0.40 msgs/s  273.586 KiB/s 186.864 MiB copied ETA: Thu Sep 19 11:09:10 2019  8353 s  3368/14211 msgs left
+msg INBOX/10864 {109398}      copied to INBOX/14415      0.40 msgs/s  273.611 KiB/s 186.968 MiB copied ETA: Thu Sep 19 11:07:52 2019  8276 s  3347/14211 msgs left
+msg INBOX/10906 {17359}       copied to INBOX/14416      0.41 msgs/s  273.563 KiB/s 186.985 MiB copied ETA: Thu Sep 19 11:05:42 2019  8145 s  3305/14211 msgs left
+msg INBOX/10930 {16938}       copied to INBOX/14417      0.41 msgs/s  273.518 KiB/s 187.001 MiB copied ETA: Thu Sep 19 11:04:17 2019  8060 s  3281/14211 msgs left
+msg INBOX/11012 {6548367}     copied to INBOX/14418      0.41 msgs/s  281.879 KiB/s 193.246 MiB copied ETA: Thu Sep 19 11:00:51 2019  7852 s  3199/14211 msgs left
+msg INBOX/11014 {22299}       copied to INBOX/14419      0.41 msgs/s  281.845 KiB/s 193.267 MiB copied ETA: Thu Sep 19 11:00:21 2019  7822 s  3197/14211 msgs left
+msg INBOX/11018 {13836}       copied to INBOX/14420      0.41 msgs/s  281.803 KiB/s 193.281 MiB copied ETA: Thu Sep 19 10:59:46 2019  7787 s  3193/14211 msgs left
+msg INBOX/11032 {26763}       copied to INBOX/14421      0.41 msgs/s  281.782 KiB/s 193.306 MiB copied ETA: Thu Sep 19 10:58:47 2019  7727 s  3179/14211 msgs left
+msg INBOX/11041 {190879}      copied to INBOX/14422      0.41 msgs/s  281.967 KiB/s 193.488 MiB copied ETA: Thu Sep 19 10:58:01 2019  7681 s  3170/14211 msgs left
+msg INBOX/11091 {195611}      copied to INBOX/14423      0.41 msgs/s  282.153 KiB/s 193.675 MiB copied ETA: Thu Sep 19 10:55:36 2019  7536 s  3120/14211 msgs left
+msg INBOX/11095 {21387}       copied to INBOX/14424      0.42 msgs/s  282.114 KiB/s 193.695 MiB copied ETA: Thu Sep 19 10:55:02 2019  7503 s  3116/14211 msgs left
+msg INBOX/11110 {194991}      copied to INBOX/14425      0.42 msgs/s  282.274 KiB/s 193.881 MiB copied ETA: Thu Sep 19 10:54:04 2019  7444 s  3101/14211 msgs left
+msg INBOX/11111 {40227}       copied to INBOX/14426      0.42 msgs/s  282.253 KiB/s 193.919 MiB copied ETA: Thu Sep 19 10:53:39 2019  7418 s  3100/14211 msgs left
+msg INBOX/11112 {34605}       copied to INBOX/14427      0.42 msgs/s  282.227 KiB/s 193.952 MiB copied ETA: Thu Sep 19 10:53:13 2019  7393 s  3099/14211 msgs left
+msg INBOX/11114 {29071}       copied to INBOX/14428      0.42 msgs/s  282.201 KiB/s 193.980 MiB copied ETA: Thu Sep 19 10:52:45 2019  7365 s  3097/14211 msgs left
+msg INBOX/11116 {35048}       copied to INBOX/14429      0.42 msgs/s  282.186 KiB/s 194.014 MiB copied ETA: Thu Sep 19 10:52:18 2019  7337 s  3095/14211 msgs left
+msg INBOX/11117 {34926}       copied to INBOX/14430      0.42 msgs/s  282.172 KiB/s 194.047 MiB copied ETA: Thu Sep 19 10:51:52 2019  7311 s  3094/14211 msgs left
+msg INBOX/11141 {25353}       copied to INBOX/14431      0.42 msgs/s  282.143 KiB/s 194.071 MiB copied ETA: Thu Sep 19 10:50:33 2019  7232 s  3070/14211 msgs left
+msg INBOX/11142 {53172}       copied to INBOX/14432      0.43 msgs/s  282.153 KiB/s 194.122 MiB copied ETA: Thu Sep 19 10:50:09 2019  7207 s  3069/14211 msgs left
+msg INBOX/11144 {14660}       copied to INBOX/14433      0.43 msgs/s  282.113 KiB/s 194.136 MiB copied ETA: Thu Sep 19 10:49:42 2019  7180 s  3067/14211 msgs left
+msg INBOX/11166 {55367}       copied to INBOX/14434      0.43 msgs/s  282.117 KiB/s 194.189 MiB copied ETA: Thu Sep 19 10:48:29 2019  7107 s  3045/14211 msgs left
+msg INBOX/11181 {5369287}     copied to INBOX/14435      0.43 msgs/s  288.289 KiB/s 199.309 MiB copied ETA: Thu Sep 19 10:48:04 2019  7079 s  3030/14211 msgs left
+msg INBOX/11204 {198715}      copied to INBOX/14436      0.43 msgs/s  288.450 KiB/s 199.499 MiB copied ETA: Thu Sep 19 10:46:50 2019  7005 s  3007/14211 msgs left
+msg INBOX/11205 {81678}       copied to INBOX/14437      0.43 msgs/s  288.453 KiB/s 199.576 MiB copied ETA: Thu Sep 19 10:46:28 2019  6983 s  3006/14211 msgs left
+msg INBOX/11243 {405636}      copied to INBOX/14438      0.43 msgs/s  288.834 KiB/s 199.963 MiB copied ETA: Thu Sep 19 10:44:42 2019  6876 s  2968/14211 msgs left
+msg INBOX/11245 {77835}       copied to INBOX/14439      0.43 msgs/s  288.855 KiB/s 200.038 MiB copied ETA: Thu Sep 19 10:44:17 2019  6851 s  2966/14211 msgs left
+msg INBOX/11246 {108602}      copied to INBOX/14440      0.43 msgs/s  288.923 KiB/s 200.141 MiB copied ETA: Thu Sep 19 10:43:55 2019  6829 s  2965/14211 msgs left
+msg INBOX/11247 {127977}      copied to INBOX/14441      0.44 msgs/s  288.995 KiB/s 200.263 MiB copied ETA: Thu Sep 19 10:43:33 2019  6807 s  2964/14211 msgs left
+msg INBOX/11258 {200469}      copied to INBOX/14442      0.44 msgs/s  289.169 KiB/s 200.454 MiB copied ETA: Thu Sep 19 10:42:49 2019  6762 s  2953/14211 msgs left
+msg INBOX/11320 {5479}        copied to INBOX/14443      0.44 msgs/s  289.126 KiB/s 200.460 MiB copied ETA: Thu Sep 19 10:40:07 2019  6600 s  2891/14211 msgs left
+msg INBOX/11346 {33797}       copied to INBOX/14444      0.44 msgs/s  289.111 KiB/s 200.492 MiB copied ETA: Thu Sep 19 10:38:48 2019  6521 s  2865/14211 msgs left
+msg INBOX/11347 {79714}       copied to INBOX/14445      0.44 msgs/s  289.063 KiB/s 200.568 MiB copied ETA: Thu Sep 19 10:38:29 2019  6501 s  2864/14211 msgs left
+msg INBOX/11393 {6472418}     copied to INBOX/14446      0.44 msgs/s  296.846 KiB/s 206.740 MiB copied ETA: Thu Sep 19 10:36:50 2019  6400 s  2818/14211 msgs left
+msg INBOX/11406 {20934}       copied to INBOX/14447      0.44 msgs/s  296.795 KiB/s 206.760 MiB copied ETA: Thu Sep 19 10:36:03 2019  6352 s  2805/14211 msgs left
+msg INBOX/11464 {207150}      copied to INBOX/14448      0.44 msgs/s  296.979 KiB/s 206.958 MiB copied ETA: Thu Sep 19 10:33:34 2019  6203 s  2747/14211 msgs left
+msg INBOX/11549 {190444}      copied to INBOX/14449      0.44 msgs/s  297.155 KiB/s 207.140 MiB copied ETA: Thu Sep 19 10:30:05 2019  5994 s  2662/14211 msgs left
+msg INBOX/11582 {84849}       copied to INBOX/14450      0.45 msgs/s  297.193 KiB/s 207.220 MiB copied ETA: Thu Sep 19 10:28:34 2019  5903 s  2629/14211 msgs left
+msg INBOX/11750 {24205}       copied to INBOX/14451      0.45 msgs/s  297.150 KiB/s 207.244 MiB copied ETA: Thu Sep 19 10:22:01 2019  5510 s  2461/14211 msgs left
+msg INBOX/11757 {13834}       copied to INBOX/14452      0.45 msgs/s  297.103 KiB/s 207.257 MiB copied ETA: Thu Sep 19 10:21:29 2019  5478 s  2454/14211 msgs left
+msg INBOX/11787 {195906}      copied to INBOX/14453      0.45 msgs/s  297.268 KiB/s 207.444 MiB copied ETA: Thu Sep 19 10:20:08 2019  5396 s  2424/14211 msgs left
+msg INBOX/11808 {16791}       copied to INBOX/14454      0.45 msgs/s  297.178 KiB/s 207.460 MiB copied ETA: Thu Sep 19 10:19:06 2019  5335 s  2403/14211 msgs left
+msg INBOX/11960 {30317}       copied to INBOX/14455      0.45 msgs/s  297.150 KiB/s 207.488 MiB copied ETA: Thu Sep 19 10:13:15 2019  4983 s  2251/14211 msgs left
+msg INBOX/11998 {30883}       copied to INBOX/14456      0.45 msgs/s  297.131 KiB/s 207.518 MiB copied ETA: Thu Sep 19 10:11:37 2019  4885 s  2213/14211 msgs left
+msg INBOX/12003 {35878}       copied to INBOX/14457      0.45 msgs/s  297.098 KiB/s 207.552 MiB copied ETA: Thu Sep 19 10:11:12 2019  4860 s  2208/14211 msgs left
+msg INBOX/12032 {818484}      copied to INBOX/14458      0.46 msgs/s  297.970 KiB/s 208.333 MiB copied ETA: Thu Sep 19 10:09:58 2019  4785 s  2179/14211 msgs left
+msg INBOX/12096 {31851}       copied to INBOX/14459      0.46 msgs/s  297.936 KiB/s 208.363 MiB copied ETA: Thu Sep 19 10:07:25 2019  4632 s  2115/14211 msgs left
+msg INBOX/12116 {197499}      copied to INBOX/14460      0.46 msgs/s  297.944 KiB/s 208.551 MiB copied ETA: Thu Sep 19 10:06:32 2019  4578 s  2095/14211 msgs left
+msg INBOX/12192 {20593}       copied to INBOX/14461      0.46 msgs/s  297.893 KiB/s 208.571 MiB copied ETA: Thu Sep 19 10:03:34 2019  4400 s  2019/14211 msgs left
+msg INBOX/12195 {35991}       copied to INBOX/14462      0.46 msgs/s  297.857 KiB/s 208.605 MiB copied ETA: Thu Sep 19 10:03:15 2019  4381 s  2016/14211 msgs left
+msg INBOX/12196 {50495}       copied to INBOX/14463      0.46 msgs/s  297.823 KiB/s 208.654 MiB copied ETA: Thu Sep 19 10:03:02 2019  4367 s  2015/14211 msgs left
+msg INBOX/12198 {258356}      copied to INBOX/14464      0.46 msgs/s  297.944 KiB/s 208.900 MiB copied ETA: Thu Sep 19 10:02:48 2019  4353 s  2013/14211 msgs left
+msg INBOX/12221 {454625}      copied to INBOX/14465      0.46 msgs/s  298.270 KiB/s 209.334 MiB copied ETA: Thu Sep 19 10:01:50 2019  4295 s  1990/14211 msgs left
+msg INBOX/12222 {34280}       copied to INBOX/14466      0.46 msgs/s  298.226 KiB/s 209.366 MiB copied ETA: Thu Sep 19 10:01:37 2019  4281 s  1989/14211 msgs left
+msg INBOX/12269 {56606}       copied to INBOX/14467      0.47 msgs/s  298.221 KiB/s 209.420 MiB copied ETA: Thu Sep 19 09:59:45 2019  4169 s  1942/14211 msgs left
+msg INBOX/12344 {24841}       copied to INBOX/14468      0.47 msgs/s  298.146 KiB/s 209.444 MiB copied ETA: Thu Sep 19 09:56:53 2019  3997 s  1867/14211 msgs left
+msg INBOX/12385 {13821}       copied to INBOX/14469      0.47 msgs/s  298.106 KiB/s 209.457 MiB copied ETA: Thu Sep 19 09:55:15 2019  3898 s  1826/14211 msgs left
+msg INBOX/12403 {194454}      copied to INBOX/14470      0.47 msgs/s  298.256 KiB/s 209.643 MiB copied ETA: Thu Sep 19 09:54:27 2019  3850 s  1808/14211 msgs left
+msg INBOX/12443 {18187}       copied to INBOX/14471      0.47 msgs/s  298.215 KiB/s 209.660 MiB copied ETA: Thu Sep 19 09:52:51 2019  3755 s  1768/14211 msgs left
+msg INBOX/12611 {3188}        copied to INBOX/14472      0.47 msgs/s  298.154 KiB/s 209.663 MiB copied ETA: Thu Sep 19 09:46:46 2019  3389 s  1600/14211 msgs left
+msg INBOX/12665 {222224}      copied to INBOX/14473      0.47 msgs/s  298.306 KiB/s 209.875 MiB copied ETA: Thu Sep 19 09:44:44 2019  3266 s  1546/14211 msgs left
+msg INBOX/12768 {35323}       copied to INBOX/14474      0.47 msgs/s  298.287 KiB/s 209.909 MiB copied ETA: Thu Sep 19 09:40:58 2019  3040 s  1443/14211 msgs left
+msg INBOX/12773 {73521}       copied to INBOX/14475      0.48 msgs/s  298.287 KiB/s 209.979 MiB copied ETA: Thu Sep 19 09:40:40 2019  3022 s  1438/14211 msgs left
+msg INBOX/12898 {9453}        copied to INBOX/14476      0.48 msgs/s  298.234 KiB/s 209.988 MiB copied ETA: Thu Sep 19 09:36:10 2019  2752 s  1313/14211 msgs left
+msg INBOX/12922 {81740}       copied to INBOX/14477      0.48 msgs/s  298.257 KiB/s 210.066 MiB copied ETA: Thu Sep 19 09:35:13 2019  2695 s  1289/14211 msgs left
+msg INBOX/13053 {11059}       copied to INBOX/14478      0.48 msgs/s  298.210 KiB/s 210.076 MiB copied ETA: Thu Sep 19 09:30:33 2019  2414 s  1158/14211 msgs left
+msg INBOX/13117 {214765}      copied to INBOX/14479      0.48 msgs/s  298.398 KiB/s 210.281 MiB copied ETA: Thu Sep 19 09:28:14 2019  2275 s  1094/14211 msgs left
+msg INBOX/13128 {4316}        copied to INBOX/14480      0.48 msgs/s  298.339 KiB/s 210.285 MiB copied ETA: Thu Sep 19 09:27:45 2019  2246 s  1083/14211 msgs left
+msg INBOX/13151 {31167}       copied to INBOX/14481      0.48 msgs/s  298.309 KiB/s 210.315 MiB copied ETA: Thu Sep 19 09:26:52 2019  2193 s  1060/14211 msgs left
+msg INBOX/13194 {210139}      copied to INBOX/14482      0.48 msgs/s  298.479 KiB/s 210.515 MiB copied ETA: Thu Sep 19 09:25:18 2019  2099 s  1017/14211 msgs left
+msg INBOX/13467 {22580}       copied to INBOX/14483      0.49 msgs/s  298.435 KiB/s 210.537 MiB copied ETA: Thu Sep 19 09:15:51 2019  1531 s  744/14211 msgs left
+msg INBOX/13481 {216065}      copied to INBOX/14484      0.49 msgs/s  298.590 KiB/s 210.743 MiB copied ETA: Thu Sep 19 09:15:18 2019  1499 s  730/14211 msgs left
+msg INBOX/13489 {22117}       copied to INBOX/14485      0.49 msgs/s  298.552 KiB/s 210.764 MiB copied ETA: Thu Sep 19 09:14:58 2019  1479 s  722/14211 msgs left
+msg INBOX/13630 {36851}       copied to INBOX/14486      0.49 msgs/s  298.517 KiB/s 210.799 MiB copied ETA: Thu Sep 19 09:10:07 2019  1187 s  581/14211 msgs left
+msg INBOX/13633 {57401}       copied to INBOX/14487      0.49 msgs/s  298.519 KiB/s 210.854 MiB copied ETA: Thu Sep 19 09:09:58 2019  1178 s  578/14211 msgs left
+msg INBOX/13708 {215432}      copied to INBOX/14488      0.49 msgs/s  298.681 KiB/s 211.059 MiB copied ETA: Thu Sep 19 09:07:23 2019  1022 s  503/14211 msgs left
+msg INBOX/13720 {33506}       copied to INBOX/14489      0.49 msgs/s  298.644 KiB/s 211.091 MiB copied ETA: Thu Sep 19 09:06:56 2019  995 s  491/14211 msgs left
+msg INBOX/13806 {210527}      copied to INBOX/14490      0.49 msgs/s  298.798 KiB/s 211.292 MiB copied ETA: Thu Sep 19 09:04:00 2019  819 s  405/14211 msgs left
+msg INBOX/13955 {28611}       copied to INBOX/14491      0.50 msgs/s  298.762 KiB/s 211.319 MiB copied ETA: Thu Sep 19 08:58:58 2019  516 s  256/14211 msgs left
+msg INBOX/13973 {42549}       copied to INBOX/14492      0.50 msgs/s  298.759 KiB/s 211.360 MiB copied ETA: Thu Sep 19 08:58:20 2019  479 s  238/14211 msgs left
+msg INBOX/14012 {126423}      copied to INBOX/14493      0.50 msgs/s  298.854 KiB/s 211.480 MiB copied ETA: Thu Sep 19 08:57:01 2019  399 s  199/14211 msgs left
+msg INBOX/14052 {131258}      copied to INBOX/14494      0.50 msgs/s  298.941 KiB/s 211.606 MiB copied ETA: Thu Sep 19 08:55:42 2019  320 s  160/14211 msgs left
+msg INBOX/14075 {134771}      copied to INBOX/14495      0.50 msgs/s  298.990 KiB/s 211.734 MiB copied ETA: Thu Sep 19 08:54:56 2019  274 s  137/14211 msgs left
+msg INBOX/14076 {125564}      copied to INBOX/14496      0.50 msgs/s  299.062 KiB/s 211.854 MiB copied ETA: Thu Sep 19 08:54:53 2019  271 s  136/14211 msgs left
+msg INBOX/14088 {21963}       copied to INBOX/14497      0.50 msgs/s  299.024 KiB/s 211.875 MiB copied ETA: Thu Sep 19 08:54:29 2019  246 s  124/14211 msgs left
+msg INBOX/14091 {3919}        copied to INBOX/14498      0.50 msgs/s  298.962 KiB/s 211.879 MiB copied ETA: Thu Sep 19 08:54:23 2019  240 s  121/14211 msgs left
+msg INBOX/14103 {14237619}    copied to INBOX/14499      0.50 msgs/s  315.092 KiB/s 225.457 MiB copied ETA: Thu Sep 19 08:54:07 2019  218 s  109/14211 msgs left
+msg INBOX/14107 {3109}        copied to INBOX/14500      0.50 msgs/s  315.032 KiB/s 225.460 MiB copied ETA: Thu Sep 19 08:53:59 2019  209 s  105/14211 msgs left
+msg INBOX/14109 {342150}      copied to INBOX/14501      0.50 msgs/s  315.319 KiB/s 225.786 MiB copied ETA: Thu Sep 19 08:53:55 2019  205 s  103/14211 msgs left
+msg INBOX/14111 {112972}      copied to INBOX/14502      0.50 msgs/s  315.378 KiB/s 225.894 MiB copied ETA: Thu Sep 19 08:53:51 2019  200 s  101/14211 msgs left
+msg INBOX/14112 {107380}      copied to INBOX/14503      0.51 msgs/s  315.436 KiB/s 225.996 MiB copied ETA: Thu Sep 19 08:53:48 2019  198 s  100/14211 msgs left
+msg INBOX/14118 {133369}      copied to INBOX/14504      0.51 msgs/s  315.491 KiB/s 226.123 MiB copied ETA: Thu Sep 19 08:53:36 2019  185 s  94/14211 msgs left
+msg INBOX/14124 {135677}      copied to INBOX/14505      0.51 msgs/s  315.563 KiB/s 226.253 MiB copied ETA: Thu Sep 19 08:53:24 2019  173 s  88/14211 msgs left
+msg INBOX/14128 {13292}       copied to INBOX/14506      0.51 msgs/s  315.506 KiB/s 226.265 MiB copied ETA: Thu Sep 19 08:53:16 2019  165 s  84/14211 msgs left
+msg INBOX/14134 {29859}       copied to INBOX/14507      0.51 msgs/s  315.487 KiB/s 226.294 MiB copied ETA: Thu Sep 19 08:53:04 2019  153 s  78/14211 msgs left
+msg INBOX/14135 {45939}       copied to INBOX/14508      0.51 msgs/s  315.463 KiB/s 226.338 MiB copied ETA: Thu Sep 19 08:53:02 2019  150 s  77/14211 msgs left
+msg INBOX/14136 {47476}       copied to INBOX/14509      0.51 msgs/s  315.447 KiB/s 226.383 MiB copied ETA: Thu Sep 19 08:53:00 2019  148 s  76/14211 msgs left
+msg INBOX/14137 {25456}       copied to INBOX/14510      0.51 msgs/s  315.391 KiB/s 226.407 MiB copied ETA: Thu Sep 19 08:52:58 2019  146 s  75/14211 msgs left
+msg INBOX/14138 {43270}       copied to INBOX/14511      0.52 msgs/s  315.366 KiB/s 226.448 MiB copied ETA: Thu Sep 19 08:52:56 2019  144 s  74/14211 msgs left
+msg INBOX/14139 {26207}       copied to INBOX/14512      0.52 msgs/s  315.336 KiB/s 226.473 MiB copied ETA: Thu Sep 19 08:52:54 2019  141 s  73/14211 msgs left
+msg INBOX/14140 {75240}       copied to INBOX/14513      0.52 msgs/s  315.354 KiB/s 226.545 MiB copied ETA: Thu Sep 19 08:52:52 2019  139 s  72/14211 msgs left
+Folder     3/7 [SENT]                              -> [SENT]                             
+Host1: folder [SENT] has 0 messages in total (mentioned by SELECT)
+Host2: folder [SENT] has 0 messages in total (mentioned by SELECT)
+Host2: folder [SENT] permanentflags: 
+Host1: folder [SENT] considering 0 messages
+Host2: folder [SENT] considering 0 messages
+Host1: folder [SENT] selected 0 messages, duplicates 0
+Host2: folder [SENT] selected 0 messages, duplicates 0
+Folder     4/7 [SPAM]                              -> [SPAM]                             
+Host1: folder [SPAM] has 72 messages in total (mentioned by SELECT)
+Host2: folder [SPAM] has 86 messages in total (mentioned by SELECT)
+Host2: folder [SPAM] permanentflags: 
+Host1: folder [SPAM] considering 72 messages
+Host2: folder [SPAM] considering 86 messages
+Host1: folder [SPAM] selected 72 messages, duplicates 0
+Host2: folder [SPAM] selected 86 messages, duplicates 0
+msg SPAM/3569 {13910}        copied to SPAM/87         0.52 msgs/s  313.836 KiB/s 226.558 MiB copied ETA: Thu Sep 19 08:50:50 2019  14 s  7/14211 msgs left
+msg SPAM/3570 {9893}         copied to SPAM/88         0.52 msgs/s  313.802 KiB/s 226.568 MiB copied ETA: Thu Sep 19 08:50:48 2019  12 s  6/14211 msgs left
+msg SPAM/3571 {12039}        copied to SPAM/89         0.52 msgs/s  313.764 KiB/s 226.579 MiB copied ETA: Thu Sep 19 08:50:46 2019  10 s  5/14211 msgs left
+msg SPAM/3572 {19265}        copied to SPAM/90         0.52 msgs/s  313.726 KiB/s 226.598 MiB copied ETA: Thu Sep 19 08:50:44 2019  8 s  4/14211 msgs left
+msg SPAM/3573 {9274}         copied to SPAM/91         0.52 msgs/s  313.685 KiB/s 226.606 MiB copied ETA: Thu Sep 19 08:50:42 2019  6 s  3/14211 msgs left
+msg SPAM/3574 {14395}        copied to SPAM/92         0.52 msgs/s  313.640 KiB/s 226.620 MiB copied ETA: Thu Sep 19 08:50:41 2019  4 s  2/14211 msgs left
+msg SPAM/3575 {22797}        copied to SPAM/93         0.52 msgs/s  313.581 KiB/s 226.642 MiB copied ETA: Thu Sep 19 08:50:39 2019  2 s  1/14211 msgs left
+msg SPAM/3576 {30529}        copied to SPAM/94         0.53 msgs/s  313.529 KiB/s 226.671 MiB copied ETA: Thu Sep 19 08:50:37 2019  0 s  0/14211 msgs left
+Folder     5/7 [TRASH]                             -> [TRASH]                            
+Host1: folder [TRASH] has 0 messages in total (mentioned by SELECT)
+Host2: folder [TRASH] has 0 messages in total (mentioned by SELECT)
+Host2: folder [TRASH] permanentflags: 
+Host1: folder [TRASH] considering 0 messages
+Host2: folder [TRASH] considering 0 messages
+Host1: folder [TRASH] selected 0 messages, duplicates 0
+Host2: folder [TRASH] selected 0 messages, duplicates 0
+Folder     6/7 [confirmed-ham]                     -> [confirmed-ham]                    
+Host1: folder [confirmed-ham] has 0 messages in total (mentioned by SELECT)
+Host2: folder [confirmed-ham] has 0 messages in total (mentioned by SELECT)
+Host2: folder [confirmed-ham] permanentflags: 
+Host1: folder [confirmed-ham] considering 0 messages
+Host2: folder [confirmed-ham] considering 0 messages
+Host1: folder [confirmed-ham] selected 0 messages, duplicates 0
+Host2: folder [confirmed-ham] selected 0 messages, duplicates 0
+Folder     7/7 [confirmed-spam]                    -> [confirmed-spam]                   
+Host1: folder [confirmed-spam] has 0 messages in total (mentioned by SELECT)
+Host2: folder [confirmed-spam] has 0 messages in total (mentioned by SELECT)
+Host2: folder [confirmed-spam] permanentflags: 
+Host1: folder [confirmed-spam] considering 0 messages
+Host2: folder [confirmed-spam] considering 0 messages
+Host1: folder [confirmed-spam] selected 0 messages, duplicates 0
+Host2: folder [confirmed-spam] selected 0 messages, duplicates 0
+++++ End looping on each folder
+
+Folders sizes after the synchronization.
+You can remove this foldersizes listing by using  "--nofoldersizesatend"
+++++ Calculating sizes of 7 folders on Host1
+Host1 folder     1/7 [DRAFTS]                            Size:         0 Messages:     0 Biggest:         0
+Host1 folder     2/7 [INBOX]                             Size: 2315647666 Messages: 14139 Biggest: 110850915
+Host1 folder     3/7 [SENT]                              Size:         0 Messages:     0 Biggest:         0
+Host1 folder     4/7 [SPAM]                              Size:    944311 Messages:    72 Biggest:     52417
+Host1 folder     5/7 [TRASH]                             Size:         0 Messages:     0 Biggest:         0
+Host1 folder     6/7 [confirmed-ham]                     Size:         0 Messages:     0 Biggest:         0
+Host1 folder     7/7 [confirmed-spam]                    Size:         0 Messages:     0 Biggest:         0
+Host1 Nb folders:                7 folders
+Host1 Nb messages:           14211 messages
+Host1 Total size:       2316591977 bytes (2.157 GiB)
+Host1 Biggest message:   110850915 bytes (105.716 MiB)
+Host1 Time spent:              1.7 seconds
+++++ Calculating sizes of 7 folders on Host2
+Host2 folder     1/7 [DRAFTS]                            Size:         0 Messages:     0 Biggest:         0
+Host2 folder     2/7 [INBOX]                             Size: 2552903951 Messages: 14513 Biggest: 110850915
+Host2 folder     3/7 [SENT]                              Size:         0 Messages:     0 Biggest:         0
+Host2 folder     4/7 [SPAM]                              Size:   1246936 Messages:    94 Biggest:     52417
+Host2 folder     5/7 [TRASH]                             Size:         0 Messages:     0 Biggest:         0
+Host2 folder     6/7 [confirmed-ham]                     Size:         0 Messages:     0 Biggest:         0
+Host2 folder     7/7 [confirmed-spam]                    Size:         0 Messages:     0 Biggest:         0
+Host2 Nb folders:                7 folders
+Host2 Nb messages:           14607 messages
+Host2 Total size:       2554150887 bytes (2.379 GiB)
+Host2 Biggest message:   110850915 bytes (105.716 MiB)
+Host2 Time spent:              1.4 seconds
+++++ Statistics
+Transfer started on                     : Thu Sep 19 08:38:13 2019
+Transfer ended on                       : Thu Sep 19 08:50:41 2019
+Transfer time                           : 747.4 sec
+Folders synced                          : 7/7 synced
+Messages transferred                    : 389 
+Messages skipped                        : 13822
+Messages found duplicate on host1       : 0
+Messages found duplicate on host2       : 0
+Messages found crossduplicate on host2  : 0
+Messages void (noheader) on host1       : 0  
+Messages void (noheader) on host2       : 0
+Messages found in host1 not in host2    : 0 messages
+Messages found in host2 not in host1    : 396 messages
+Messages deleted on host1               : 0
+Messages deleted on host2               : 0
+Total bytes transferred                 : 237681834 (226.671 MiB)
+Total bytes skipped                     : 2078910143 (1.936 GiB)
+Message rate                            : 0.5 messages/s
+Average bandwidth rate                  : 310.5 KiB/s
+Reconnections to host1                  : 0
+Reconnections to host2                  : 0
+Memory consumption at the end           : 410.9 MiB (started with 221.7 MiB)
+Load end is                             : 0.56 0.28 0.21 1/219 on 1 cores
+Biggest message                         : 39231205 bytes (37.414 MiB)
+Memory/biggest message ratio            : 11.0
+Start difference host2 - host1          : 7 messages, -122924 bytes (-120.043 KiB)
+Final difference host2 - host1          : 396 messages, 237558910 bytes (226.554 MiB)
+The sync looks good, all 14211 identified messages in host1 are on host2.
+The sync is not strict, there are 396 messages in host2 that are not on host1. Use --delete2 to delete them and have a strict sync.
+Detected 0 errors
+
+Check if a new imapsync release is available by adding --releasecheck
+Homepage: https://imapsync.lamiral.info/
+Exiting with return value 0 (EX_OK: successful termination)
+Log file is LOG_imapsync/2019_09_19_08_38_13_555_m.damaszka@estella.eu_m.damaszka@estella.eu.txt ( to change it, use --logfile filepath ; or use --nolog to turn off logging )

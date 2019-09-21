@@ -1,0 +1,72 @@
+
+------------------------------------
+IMAPSync started - 2019-09-19 10:57:34
+Starting k.frankowski 2019-09-19 10:57:34
+Finished k.frankowski@fbf-bedandmore.pl 2019-09-19 12:47:18
+
+Starting p.tyburcy 2019-09-19 12:47:18
+Finished p.tyburcy@fbf-bedandmore.pl 2019-09-19 12:48:04
+
+Starting biuro 2019-09-19 12:48:04
+Finished biuro@fbf-bedandmore.pl 2019-09-19 12:50:02
+
+Starting zamowienia 2019-09-19 12:50:02
+Finished zamowienia@fbf-bedandmore.pl 2019-09-19 12:54:29
+
+Starting a.rekis 2019-09-19 12:54:29
+Finished a.rekis@fbf-bedandmore.pl 2019-09-19 14:13:11
+
+Starting a.mancewicz 2019-09-19 14:13:11
+Finished a.mancewicz@fbf-bedandmore.pl 2019-09-19 14:22:22
+
+
+IMAPSync Finished - 2019-09-19 14:22:22
+------------------------------------
+
+------------------------------------
+IMAPSync started - 2019-09-20 20:14:47
+Starting k.frankowski 2019-09-20 20:14:47
+Finished k.frankowski@fbf-bedandmore.pl 2019-09-20 20:30:38
+
+Starting p.tyburcy 2019-09-20 20:30:38
+Finished p.tyburcy@fbf-bedandmore.pl 2019-09-20 20:30:58
+
+Starting biuro 2019-09-20 20:30:58
+Finished biuro@fbf-bedandmore.pl 2019-09-20 20:31:39
+
+Starting zamowienia 2019-09-20 20:31:39
+Finished zamowienia@fbf-bedandmore.pl 2019-09-20 20:32:11
+
+Starting a.rekis 2019-09-20 20:32:11
+Finished a.rekis@fbf-bedandmore.pl 2019-09-20 20:39:23
+
+Starting a.mancewicz 2019-09-20 20:39:23
+Finished a.mancewicz@fbf-bedandmore.pl 2019-09-20 20:40:08
+
+
+IMAPSync Finished - 2019-09-20 20:40:08
+------------------------------------
+
+------------------------------------
+IMAPSync started - 2019-09-21 07:23:42
+Starting k.frankowski 2019-09-21 07:23:42
+Finished k.frankowski@fbf-bedandmore.pl 2019-09-21 07:23:44
+
+Starting p.tyburcy 2019-09-21 07:23:44
+Finished p.tyburcy@fbf-bedandmore.pl 2019-09-21 07:23:46
+
+Starting biuro 2019-09-21 07:23:46
+Finished biuro@fbf-bedandmore.pl 2019-09-21 07:23:47
+
+Starting zamowienia 2019-09-21 07:23:47
+Finished zamowienia@fbf-bedandmore.pl 2019-09-21 07:23:49
+
+Starting a.rekis 2019-09-21 07:23:49
+Finished a.rekis@fbf-bedandmore.pl 2019-09-21 07:23:51
+
+Starting a.mancewicz 2019-09-21 07:23:51
+Finished a.mancewicz@fbf-bedandmore.pl 2019-09-21 07:23:53
+
+
+IMAPSync Finished - 2019-09-21 07:23:53
+------------------------------------

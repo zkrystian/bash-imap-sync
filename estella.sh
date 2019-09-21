@@ -4,21 +4,23 @@
 SERVERNAME=$HOSTNAME
 SCRIPT_NAME="$SERVERNAME - IMAP TO IMAP"
 MAIL=/bin/mail;
-MAIL_RECIPIENT="mail_do_powiadomienia@gmail.com"
-LOCK_FILE="/tmp/$SERVERNAME.imapsync.lockfile"
-LOGFILE="imapsync_log.txt"
+MAIL_RECIPIENT="zkrystian@gmail.com"
+LOCK_FILE="/tmp/$SERVERNAME.imapsync/estella.lockfile"
+LOGFILE="imapsync_log_estella.txt"
 
 
-#host1 źródłowy
-HOST1=mail.domena.pl
+#host1 source
+HOST1=stella.home.pl
+DOMAIN1=stella.home.pl
 
 
-#host2 docelowy
-HOST2=mail.domena2.pl
+#host2 destination
+HOST2=afrodyta.boost.pl
+DOMAIN2=estella.eu
 
 
 #domena w której znajdują się skrzynki
-DOMAIN=domena.pl
+DOMAIN=estella.eu
 
 ####################################################
 ###### Nie modyfikuj poniżej tej linii
@@ -35,25 +37,26 @@ echo "IMAPSync started - $TIME_NOW" >> $LOGFILE
 echo "" >> $logfile
 
 { while IFS=';' read u1 p1; do
-USER_NAME=$u1"@"$DOMAIN
+USER_NAME1=$u1"@"$DOMAIN1
+USER_NAME2=$u1"@"$DOMAIN2
+
 echo "Syncing User $USER_NAME"
 TIME_NOW=$(date +"%Y-%m-%d %T")
 echo "Start Syncing User $u1"
 echo "Starting $u1 $TIME_NOW" >> $LOGFILE
-imapsync --nosyncacls --syncinternaldates --host1 $HOST1 --user1 "$USER_NAME" --password1 "$p1" --host2 $HOST2 --user2 "$USER_NAME" --password2 "$p1" --noauthmd5
+imapsync --addheader --no-modulesversion --nosyncacls --nosslcheck --syncinternaldates --host1 $HOST1 --user1 "$USER_NAME1" --password1 "$p1" --host2 $HOST2 --user2 "$USER_NAME2" --password2 "$p1" --noauthmd5
 TIME_NOW=$(date +"%Y-%m-%d %T")
 echo "User $USER_NAME done"
 echo "Finished $USER_NAME $TIME_NOW" >> $LOGFILE
 echo "" >> $LOGFILE
-done ; } < imapsync-accounts.txt
+done ; } < estella.txt
 TIME_NOW=$(date +"%Y-%m-%d %T")
 echo "" >> $LOGFILE
 echo "IMAPSync Finished - $TIME_NOW" >> $LOGFILE
 echo "------------------------------------" >> $LOGFILE
 
 #Koniec
-# Usuń komenatrz poniżej, jeżeli chcesz otrzymać powiadomienie o zakończonej synchronizacji, przydatne przy dużej ilości danych
-#echo " IMAPSync Zakońcozny" | $MAIL -s "[$SCRIPT_NAME] Zakończone" $MAIL_RECIPIENT
+#echo " IMAPSync finised" | $MAIL -s "[$SCRIPT_NAME] finished" $MAIL_RECIPIENT
 rm -f $LOCK_FILE
 
 
