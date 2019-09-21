@@ -6,7 +6,7 @@
 SERVERNAME=$HOSTNAME
 SCRIPT_NAME="$SERVERNAME - IMAP TO IMAP"
 MAIL=/bin/mail;
-MAIL_RECIPIENT="enail@gmail.com"
+MAIL_RECIPIENT="email@gmail.com"
 LOCK_FILE="/tmp/$SERVERNAME.imapsync.lockfile"
 LOGFILE="imapsync_log.txt"
 
